@@ -1,4 +1,4 @@
-description: >
+description: 
   LLZK translations of the SP1 core circuits (written in Plonky3).
   Each file corresponds to a single SP1 chip (e.g., Add, Branch, KeccakPermute),
   generated from the SP1-Hypercube pipeline and emitted as LLZK IR. 
