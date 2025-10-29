@@ -1,0 +1,92 @@
+description: >
+  LLZK translations of the SP1 core circuits (written in Plonky3).
+  Each file corresponds to a single SP1 chip (e.g., Add, Branch, KeccakPermute),
+  generated from the SP1-Hypercube pipeline and emitted as LLZK IR. 
+  Each LLZK file contains the chip translation. 
+  If an LLZK file has multiple top-level defined then each struct corresponds to an opcode.
+
+repository:
+  name: "succinctlabs/sp1"
+  url: https://github.com/code-423n4/2025-09-succinct/
+  commit: df951c9a867a927f606465b08feeed88a96c9775
+  branch: "main"
+
+circuits:
+  Add:
+    llzk: Add.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/add_sub/add.rs"
+  Addi:
+    llzk: Addi.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/add_sub/addi.rs"
+  Addw:
+    llzk: Addw.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/add_sub/addw.rs"
+  Bitwise:
+    llzk: Bitwise.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/bitwise/mod.rs"
+  Branch:
+    llzk: Branch.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/control_flow/branch/air.rs"
+  DivRem:
+    llzk: DivRem.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/divrem/mod.rs"
+  Jal:
+    llzk: Jal.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/control_flow/jal/jal.rs"
+  Jalr:
+    llzk: Jalr.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/control_flow/jalr/jalr.rs"
+  KeccakPermute:
+    llzk: KeccakPermute.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/keccak256/air.rs"
+  KeccakPermuteControl:
+    llzk: KeccakPermuteControl.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/keccak256/controller.rs"
+  LoadByte:
+    llzk: LoadByte.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_byte.rs"
+  LoadDouble:
+    llzk: LoadDouble.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_double.rs"
+  LoadHalf:
+    llzk: LoadHalf.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_half.rs"
+  LoadWord:
+    llzk: LoadWord.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_word.rs"
+  LoadX0:
+    llzk: LoadX0.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_x0.rs"
+  Lt:
+    llzk: Lt.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/lt/mod.rs"
+  Mul:
+    llzk: Mul.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/mul/mod.rs"
+  Poseidon2:
+    llzk: Poseidon2.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/poseidon2.rs"
+  StoreByte:
+    llzk: StoreByte.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_byte.rs"
+  StoreDouble:
+    llzk: StoreDouble.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_double.rs"
+  StoreHalf:
+    llzk: StoreHalf.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_half.rs"
+  StoreWord:
+    llzk: StoreWord.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_word.rs"
+  Sub:
+    llzk: Sub.llzk
+    sp1_url: https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/add_sub/sub.rs
+  Subw:
+    llzk: Subw.llzk
+    sp1_url: https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/add_sub/subw.rs
+  SyscallInstrs:
+    llzk: SyscallInstrs.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/instructions/air.rs"
+  UType:
+    llzk: UType.llzk
+    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/utype/mod.rs"
