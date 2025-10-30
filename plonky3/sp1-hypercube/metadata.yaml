@@ -114,6 +114,12 @@ circuits:
   ShaExtendControl:
     llzk: ShaExtendControl.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/sha256/extend/controller.rs"
+  ShiftLeft:
+    llzk: ShiftLeft.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/sl/mod.rs"
+  ShiftRight:
+    llzk: ShiftRight.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/sr/mod.rs"
   StoreByte:
     llzk: StoreByte.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_byte.rs"
