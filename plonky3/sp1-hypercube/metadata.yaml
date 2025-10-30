@@ -27,9 +27,27 @@ circuits:
   Bls12381AddAssign:
     llzk: Bls12381AddAssign.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/weierstrass/weierstrass_add.rs"
+  Bls12381Fp2AddSubAssign:
+    llzk: Bls12381Fp2AddSubAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/fp2tower/fp2_addsub.rs"
+  Bls12381Fp2MulAssign:
+    llzk: Bls12381Fp2MulAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/fp2tower/fp2_mul.rs"
+  Bls12381FpOpAssign:
+    llzk: Bls12381FpOpAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/fp2tower/fp_mul.rs"
   Bn254AddAssign:
     llzk: Bn254AddAssign.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/weierstrass/weierstrass_add.rs"
+  Bn254Fp2AddSubAssign:
+    llzk: Bn254Fp2AddSubAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/fp2tower/fp2_addsub.rs"
+  Bn254Fp2MulAssign:
+    llzk: Bn254Fp2MulAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/fp2tower/fp2_mul.rs"
+  Bn254FpOpAssign:
+    llzk: Bn254FpOpAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/fp2tower/fp_mul.rs"
   Branch:
     llzk: Branch.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/control_flow/branch/air.rs"
