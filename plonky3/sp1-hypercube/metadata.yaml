@@ -3,7 +3,7 @@ description:
   Each file corresponds to a single SP1 chip (e.g., Add, Branch, KeccakPermute),
   generated from the SP1-Hypercube pipeline and emitted as LLZK IR. 
   Each LLZK file contains the chip translation. 
-  If an LLZK file has multiple top-level defined then each struct corresponds to an opcode.
+  If an LLZK file has multiple top-level structs then each struct corresponds to an opcode.
 
 repository:
   name: "succinctlabs/sp1"
