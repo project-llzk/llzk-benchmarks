@@ -24,6 +24,12 @@ circuits:
   Bitwise:
     llzk: Bitwise.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/bitwise/mod.rs"
+  Bls12381AddAssign:
+    llzk: Bls12381AddAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/weierstrass/weierstrass_add.rs"
+  Bn254AddAssign:
+    llzk: Bn254AddAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/weierstrass/weierstrass_add.rs"
   Branch:
     llzk: Branch.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/control_flow/branch/air.rs"
@@ -72,6 +78,12 @@ circuits:
   Poseidon2:
     llzk: Poseidon2.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/poseidon2.rs"
+  Secp256k1AddAssign:
+    llzk: Secp256k1AddAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/weierstrass/weierstrass_add.rs"
+  Secp256r1AddAssign:
+    llzk: Secp256r1AddAssign.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/weierstrass/weierstrass_add.rs"
   ShaCompress:
     llzk: ShaCompress.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/sha256/compress/air.rs"
@@ -111,6 +123,9 @@ circuits:
   Uint256Ops:
     llzk: Uint256Ops.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/uint256_ops/air.rs"
+  Uint256XU2048Mul:
+    llzk: Uint256XU2048Mul.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/u256x2048_mul/air.rs"
   UType:
     llzk: UType.llzk
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/utype/mod.rs"
