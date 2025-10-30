@@ -1,22 +1,13 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @Addi<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @add_operation_26 : !felt.type {llzk.pub}
     struct.field @add_operation_27 : !felt.type {llzk.pub}
     struct.field @add_operation_28 : !felt.type {llzk.pub}
     struct.field @add_operation_29 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type

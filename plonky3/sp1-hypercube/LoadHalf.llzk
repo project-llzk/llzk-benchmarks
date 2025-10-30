@@ -1,30 +1,13 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @LH<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
-    struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @fresh_output_3 : !felt.type {llzk.pub}
-    struct.field @fresh_output_4 : !felt.type {llzk.pub}
-    struct.field @memory_access_30 : !felt.type {llzk.pub}
-    struct.field @memory_access_31 : !felt.type {llzk.pub}
-    struct.field @memory_access_32 : !felt.type {llzk.pub}
-    struct.field @memory_access_33 : !felt.type {llzk.pub}
     struct.field @fresh_output_10 : !felt.type {llzk.pub}
-    struct.field @fresh_output_16 : !felt.type {llzk.pub}
     struct.field @fresh_output_17 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_21 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @selected_half_41 : !felt.type {llzk.pub}
     struct.field @fresh_output_26 : !felt.type {llzk.pub}
     struct.field @fresh_output_27 : !felt.type {llzk.pub}
     struct.field @fresh_output_28 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -185,8 +168,8 @@ module attributes {veridise.lang = "llzk"} {
       %102 = cast.tofelt %101 : i1
       constrain.eq %102, %felt_const_1 : !felt.type, !felt.type
       constrain.eq %arg5, %8 : !felt.type, !felt.type
-      %103 = struct.readf %arg0[@fresh_output_4] : <@LH<[]>>, !felt.type
-      constrain.eq %103, %8 : !felt.type, !felt.type
+      %103 = struct.readf %arg0[@fresh_output_1] : <@LH<[]>>, !felt.type
+      constrain.eq %103, %63 : !felt.type, !felt.type
       %104 = struct.readf %arg0[@fresh_151] : <@LH<[]>>, !felt.type
       %105 = felt.mul %104, %felt_const_1 : !felt.type, !felt.type
       %106 = struct.readf %arg0[@is_page_protect_active_45] : <@LH<[]>>, !felt.type
@@ -333,31 +316,14 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @fresh_151 : !felt.type
   }
   struct.def @LHU<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
-    struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @fresh_output_3 : !felt.type {llzk.pub}
-    struct.field @fresh_output_4 : !felt.type {llzk.pub}
-    struct.field @memory_access_30 : !felt.type {llzk.pub}
-    struct.field @memory_access_31 : !felt.type {llzk.pub}
-    struct.field @memory_access_32 : !felt.type {llzk.pub}
-    struct.field @memory_access_33 : !felt.type {llzk.pub}
     struct.field @fresh_output_10 : !felt.type {llzk.pub}
-    struct.field @fresh_output_16 : !felt.type {llzk.pub}
     struct.field @fresh_output_17 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_21 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @selected_half_41 : !felt.type {llzk.pub}
     struct.field @fresh_output_26 : !felt.type {llzk.pub}
     struct.field @fresh_output_27 : !felt.type {llzk.pub}
     struct.field @fresh_output_28 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -518,8 +484,8 @@ module attributes {veridise.lang = "llzk"} {
       %102 = cast.tofelt %101 : i1
       constrain.eq %102, %felt_const_1 : !felt.type, !felt.type
       constrain.eq %arg5, %8 : !felt.type, !felt.type
-      %103 = struct.readf %arg0[@fresh_output_4] : <@LHU<[]>>, !felt.type
-      constrain.eq %103, %8 : !felt.type, !felt.type
+      %103 = struct.readf %arg0[@fresh_output_1] : <@LHU<[]>>, !felt.type
+      constrain.eq %103, %63 : !felt.type, !felt.type
       %104 = struct.readf %arg0[@fresh_151] : <@LHU<[]>>, !felt.type
       %105 = felt.mul %104, %felt_const_1 : !felt.type, !felt.type
       %106 = struct.readf %arg0[@is_page_protect_active_45] : <@LHU<[]>>, !felt.type

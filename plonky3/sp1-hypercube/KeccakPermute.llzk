@@ -1,10 +1,5 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @KeccakPermute<[]> {
-    struct.field @clk_high_2633 : !felt.type {llzk.pub}
-    struct.field @clk_low_2634 : !felt.type {llzk.pub}
-    struct.field @state_addr_2635 : !felt.type {llzk.pub}
-    struct.field @state_addr_2636 : !felt.type {llzk.pub}
-    struct.field @state_addr_2637 : !felt.type {llzk.pub}
     struct.field @fresh_output_5 : !felt.type {llzk.pub}
     struct.field @keccak_2629 : !felt.type {llzk.pub}
     struct.field @keccak_2630 : !felt.type {llzk.pub}

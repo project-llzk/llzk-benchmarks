@@ -1,22 +1,15 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @Jalr<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @add_operation_31 : !felt.type {llzk.pub}
     struct.field @add_operation_32 : !felt.type {llzk.pub}
     struct.field @add_operation_33 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @op_a_operation_35 : !felt.type {llzk.pub}
     struct.field @op_a_operation_36 : !felt.type {llzk.pub}
     struct.field @op_a_operation_37 : !felt.type {llzk.pub}
     struct.field @op_a_operation_38 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type

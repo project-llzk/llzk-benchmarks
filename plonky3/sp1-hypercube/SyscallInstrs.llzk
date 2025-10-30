@@ -1,28 +1,16 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @SyscallInstrs<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @next_pc_29 : !felt.type {llzk.pub}
     struct.field @next_pc_30 : !felt.type {llzk.pub}
     struct.field @next_pc_31 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @op_a_value_33 : !felt.type {llzk.pub}
     struct.field @op_a_value_34 : !felt.type {llzk.pub}
     struct.field @op_a_value_35 : !felt.type {llzk.pub}
     struct.field @op_a_value_36 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @fresh_output_33 : !felt.type {llzk.pub}
     struct.field @fresh_output_34 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type

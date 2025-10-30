@@ -1,32 +1,19 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @SLT<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @fresh_output_10 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
-    struct.field @adapter_26 : !felt.type {llzk.pub}
-    struct.field @adapter_27 : !felt.type {llzk.pub}
-    struct.field @adapter_28 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
     struct.field @adapter_20 : !felt.type
     struct.field @adapter_30 : !felt.type
-    struct.field @is_slt_32 : !felt.type
-    struct.field @is_sltu_33 : !felt.type
+    struct.field @adapter_32 : !felt.type
+    struct.field @is_slt_33 : !felt.type
+    struct.field @is_sltu_34 : !felt.type
     struct.field @lt_operation_35 : !felt.type
     struct.field @lt_operation_36 : !felt.type
     struct.field @lt_operation_37 : !felt.type
@@ -37,586 +24,316 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @lt_operation_42 : !felt.type
     struct.field @lt_operation_43 : !felt.type
     struct.field @lt_operation_44 : !felt.type
-    function.def @compute(%arg0: !felt.type, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type, %arg31: !felt.type, %arg32: !felt.type, %arg33: !felt.type) -> !struct.type<@SLT<[]>> attributes {function.allow_witness} {
+    function.def @compute(%arg0: !felt.type, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type) -> !struct.type<@SLT<[]>> attributes {function.allow_witness} {
       %self = struct.new : <@SLT<[]>>
       function.return %self : !struct.type<@SLT<[]>>
     }
-    function.def @constrain(%arg0: !struct.type<@SLT<[]>>, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type, %arg31: !felt.type, %arg32: !felt.type, %arg33: !felt.type, %arg34: !felt.type) attributes {function.allow_constraint} {
-      %felt_const_1 = felt.const  1
-      %felt_const_0 = felt.const  0
-      %0 = felt.add %felt_const_1, %felt_const_0 : !felt.type, !felt.type
-      %felt_const_1_0 = felt.const  1
-      %1 = felt.sub %felt_const_1, %felt_const_1_0 : !felt.type, !felt.type
-      %2 = felt.mul %felt_const_1, %1 : !felt.type, !felt.type
-      %felt_const_0_1 = felt.const  0
-      constrain.eq %2, %felt_const_0_1 : !felt.type, !felt.type
-      %felt_const_1_2 = felt.const  1
-      %3 = felt.sub %felt_const_0, %felt_const_1_2 : !felt.type, !felt.type
-      %4 = felt.mul %felt_const_0, %3 : !felt.type, !felt.type
-      %felt_const_0_3 = felt.const  0
-      constrain.eq %4, %felt_const_0_3 : !felt.type, !felt.type
-      %felt_const_1_4 = felt.const  1
-      %5 = felt.sub %0, %felt_const_1_4 : !felt.type, !felt.type
-      %6 = felt.mul %0, %5 : !felt.type, !felt.type
-      %felt_const_0_5 = felt.const  0
-      constrain.eq %6, %felt_const_0_5 : !felt.type, !felt.type
-      %7 = struct.readf %arg0[@lt_operation_35] : <@SLT<[]>>, !felt.type
-      %8 = struct.readf %arg0[@lt_operation_36] : <@SLT<[]>>, !felt.type
-      %9 = struct.readf %arg0[@lt_operation_37] : <@SLT<[]>>, !felt.type
-      %10 = struct.readf %arg0[@lt_operation_38] : <@SLT<[]>>, !felt.type
-      %11 = struct.readf %arg0[@lt_operation_39] : <@SLT<[]>>, !felt.type
-      %12 = struct.readf %arg0[@lt_operation_40] : <@SLT<[]>>, !felt.type
-      %13 = struct.readf %arg0[@lt_operation_41] : <@SLT<[]>>, !felt.type
-      %14 = struct.readf %arg0[@lt_operation_42] : <@SLT<[]>>, !felt.type
-      %15 = struct.readf %arg0[@lt_operation_43] : <@SLT<[]>>, !felt.type
-      %16 = struct.readf %arg0[@lt_operation_44] : <@SLT<[]>>, !felt.type
-      %felt_const_1_6 = felt.const  1
-      %17 = felt.sub %felt_const_1, %felt_const_1_6 : !felt.type, !felt.type
-      %18 = felt.mul %felt_const_1, %17 : !felt.type, !felt.type
-      %felt_const_0_7 = felt.const  0
-      constrain.eq %18, %felt_const_0_7 : !felt.type, !felt.type
-      %felt_const_1_8 = felt.const  1
-      %19 = felt.sub %0, %felt_const_1_8 : !felt.type, !felt.type
-      %20 = felt.mul %0, %19 : !felt.type, !felt.type
-      %felt_const_0_9 = felt.const  0
-      constrain.eq %20, %felt_const_0_9 : !felt.type, !felt.type
-      %felt_const_1_10 = felt.const  1
-      %21 = felt.sub %0, %felt_const_1_10 : !felt.type, !felt.type
-      %22 = felt.mul %21, %felt_const_1 : !felt.type, !felt.type
-      %felt_const_0_11 = felt.const  0
-      constrain.eq %22, %felt_const_0_11 : !felt.type, !felt.type
-      %felt_const_1_12 = felt.const  1
-      %23 = felt.sub %felt_const_1, %felt_const_1_12 : !felt.type, !felt.type
-      %24 = felt.mul %felt_const_1, %23 : !felt.type, !felt.type
-      %felt_const_0_13 = felt.const  0
-      constrain.eq %24, %felt_const_0_13 : !felt.type, !felt.type
-      %felt_const_1_14 = felt.const  1
-      %25 = felt.sub %15, %felt_const_1_14 : !felt.type, !felt.type
-      %26 = felt.mul %15, %25 : !felt.type, !felt.type
-      %felt_const_0_15 = felt.const  0
-      constrain.eq %26, %felt_const_0_15 : !felt.type, !felt.type
-      %felt_const_2 = felt.const  2
-      %27 = felt.mul %felt_const_2, %arg29 : !felt.type, !felt.type
-      %felt_const_65536 = felt.const  65536
-      %28 = felt.mul %15, %felt_const_65536 : !felt.type, !felt.type
-      %29 = felt.sub %27, %28 : !felt.type, !felt.type
-      %30 = felt.mul %felt_const_1, %29 : !felt.type, !felt.type
-      %felt_const_65536_16 = felt.const  65536
-      %31 = bool.cmp lt(%30, %felt_const_65536_16)
-      %32 = cast.tofelt %31 : i1
-      %felt_const_1_17 = felt.const  1
-      constrain.eq %32, %felt_const_1_17 : !felt.type, !felt.type
-      %felt_const_1_18 = felt.const  1
-      %33 = felt.sub %felt_const_1, %felt_const_1_18 : !felt.type, !felt.type
-      %34 = felt.mul %felt_const_1, %33 : !felt.type, !felt.type
-      %felt_const_0_19 = felt.const  0
-      constrain.eq %34, %felt_const_0_19 : !felt.type, !felt.type
-      %felt_const_1_20 = felt.const  1
-      %35 = felt.sub %16, %felt_const_1_20 : !felt.type, !felt.type
-      %36 = felt.mul %16, %35 : !felt.type, !felt.type
-      %felt_const_0_21 = felt.const  0
-      constrain.eq %36, %felt_const_0_21 : !felt.type, !felt.type
-      %felt_const_2_22 = felt.const  2
-      %37 = felt.mul %felt_const_2_22, %arg34 : !felt.type, !felt.type
-      %felt_const_65536_23 = felt.const  65536
-      %38 = felt.mul %16, %felt_const_65536_23 : !felt.type, !felt.type
-      %39 = felt.sub %37, %38 : !felt.type, !felt.type
-      %40 = felt.mul %felt_const_1, %39 : !felt.type, !felt.type
-      %felt_const_65536_24 = felt.const  65536
-      %41 = bool.cmp lt(%40, %felt_const_65536_24)
-      %42 = cast.tofelt %41 : i1
-      %felt_const_1_25 = felt.const  1
-      constrain.eq %42, %felt_const_1_25 : !felt.type, !felt.type
-      %felt_const_1_26 = felt.const  1
-      %43 = felt.sub %felt_const_1, %felt_const_1_26 : !felt.type, !felt.type
-      %44 = felt.mul %43, %15 : !felt.type, !felt.type
-      %felt_const_0_27 = felt.const  0
-      constrain.eq %44, %felt_const_0_27 : !felt.type, !felt.type
-      %felt_const_1_28 = felt.const  1
-      %45 = felt.sub %felt_const_1, %felt_const_1_28 : !felt.type, !felt.type
-      %46 = felt.mul %45, %16 : !felt.type, !felt.type
-      %felt_const_0_29 = felt.const  0
-      constrain.eq %46, %felt_const_0_29 : !felt.type, !felt.type
-      %felt_const_32768 = felt.const  32768
-      %47 = felt.mul %felt_const_1, %felt_const_32768 : !felt.type, !felt.type
-      %48 = felt.add %arg29, %47 : !felt.type, !felt.type
-      %felt_const_65536_30 = felt.const  65536
-      %49 = felt.mul %felt_const_65536_30, %15 : !felt.type, !felt.type
-      %50 = felt.sub %48, %49 : !felt.type, !felt.type
-      %felt_const_32768_31 = felt.const  32768
-      %51 = felt.mul %felt_const_1, %felt_const_32768_31 : !felt.type, !felt.type
-      %52 = felt.add %arg34, %51 : !felt.type, !felt.type
-      %felt_const_65536_32 = felt.const  65536
-      %53 = felt.mul %felt_const_65536_32, %16 : !felt.type, !felt.type
-      %54 = felt.sub %52, %53 : !felt.type, !felt.type
-      %felt_const_1_33 = felt.const  1
-      %55 = felt.sub %0, %felt_const_1_33 : !felt.type, !felt.type
-      %56 = felt.mul %0, %55 : !felt.type, !felt.type
-      %felt_const_0_34 = felt.const  0
-      constrain.eq %56, %felt_const_0_34 : !felt.type, !felt.type
-      %57 = felt.add %8, %9 : !felt.type, !felt.type
-      %58 = felt.add %57, %10 : !felt.type, !felt.type
-      %59 = felt.add %58, %11 : !felt.type, !felt.type
-      %felt_const_1_35 = felt.const  1
-      %60 = felt.sub %8, %felt_const_1_35 : !felt.type, !felt.type
-      %61 = felt.mul %8, %60 : !felt.type, !felt.type
-      %felt_const_0_36 = felt.const  0
-      constrain.eq %61, %felt_const_0_36 : !felt.type, !felt.type
-      %felt_const_1_37 = felt.const  1
-      %62 = felt.sub %9, %felt_const_1_37 : !felt.type, !felt.type
-      %63 = felt.mul %9, %62 : !felt.type, !felt.type
-      %felt_const_0_38 = felt.const  0
-      constrain.eq %63, %felt_const_0_38 : !felt.type, !felt.type
-      %felt_const_1_39 = felt.const  1
-      %64 = felt.sub %10, %felt_const_1_39 : !felt.type, !felt.type
-      %65 = felt.mul %10, %64 : !felt.type, !felt.type
-      %felt_const_0_40 = felt.const  0
-      constrain.eq %65, %felt_const_0_40 : !felt.type, !felt.type
-      %felt_const_1_41 = felt.const  1
-      %66 = felt.sub %11, %felt_const_1_41 : !felt.type, !felt.type
-      %67 = felt.mul %11, %66 : !felt.type, !felt.type
-      %felt_const_0_42 = felt.const  0
-      constrain.eq %67, %felt_const_0_42 : !felt.type, !felt.type
-      %felt_const_1_43 = felt.const  1
-      %68 = felt.sub %59, %felt_const_1_43 : !felt.type, !felt.type
-      %69 = felt.mul %59, %68 : !felt.type, !felt.type
-      %felt_const_0_44 = felt.const  0
-      constrain.eq %69, %felt_const_0_44 : !felt.type, !felt.type
-      %felt_const_1_45 = felt.const  1
-      %70 = felt.sub %felt_const_1_45, %59 : !felt.type, !felt.type
-      %felt_const_0_46 = felt.const  0
-      %71 = felt.add %felt_const_0_46, %11 : !felt.type, !felt.type
-      %72 = felt.sub %0, %71 : !felt.type, !felt.type
-      %73 = felt.sub %50, %54 : !felt.type, !felt.type
-      %74 = felt.mul %72, %73 : !felt.type, !felt.type
-      %felt_const_0_47 = felt.const  0
-      constrain.eq %74, %felt_const_0_47 : !felt.type, !felt.type
-      %75 = felt.mul %50, %11 : !felt.type, !felt.type
-      %felt_const_0_48 = felt.const  0
-      %76 = felt.add %felt_const_0_48, %75 : !felt.type, !felt.type
-      %77 = felt.mul %54, %11 : !felt.type, !felt.type
-      %felt_const_0_49 = felt.const  0
-      %78 = felt.add %felt_const_0_49, %77 : !felt.type, !felt.type
-      %79 = felt.add %71, %10 : !felt.type, !felt.type
-      %80 = felt.sub %0, %79 : !felt.type, !felt.type
-      %81 = felt.sub %arg28, %arg33 : !felt.type, !felt.type
-      %82 = felt.mul %80, %81 : !felt.type, !felt.type
-      %felt_const_0_50 = felt.const  0
-      constrain.eq %82, %felt_const_0_50 : !felt.type, !felt.type
-      %83 = felt.mul %arg28, %10 : !felt.type, !felt.type
-      %84 = felt.add %76, %83 : !felt.type, !felt.type
-      %85 = felt.mul %arg33, %10 : !felt.type, !felt.type
-      %86 = felt.add %78, %85 : !felt.type, !felt.type
-      %87 = felt.add %79, %9 : !felt.type, !felt.type
-      %88 = felt.sub %0, %87 : !felt.type, !felt.type
-      %89 = felt.sub %arg27, %arg32 : !felt.type, !felt.type
-      %90 = felt.mul %88, %89 : !felt.type, !felt.type
-      %felt_const_0_51 = felt.const  0
-      constrain.eq %90, %felt_const_0_51 : !felt.type, !felt.type
-      %91 = felt.mul %arg27, %9 : !felt.type, !felt.type
-      %92 = felt.add %84, %91 : !felt.type, !felt.type
-      %93 = felt.mul %arg32, %9 : !felt.type, !felt.type
-      %94 = felt.add %86, %93 : !felt.type, !felt.type
-      %95 = felt.add %87, %8 : !felt.type, !felt.type
-      %96 = felt.sub %0, %95 : !felt.type, !felt.type
-      %97 = felt.sub %arg26, %arg31 : !felt.type, !felt.type
-      %98 = felt.mul %96, %97 : !felt.type, !felt.type
-      %felt_const_0_52 = felt.const  0
-      constrain.eq %98, %felt_const_0_52 : !felt.type, !felt.type
-      %99 = felt.mul %arg26, %8 : !felt.type, !felt.type
-      %100 = felt.add %92, %99 : !felt.type, !felt.type
-      %101 = felt.mul %arg31, %8 : !felt.type, !felt.type
-      %102 = felt.add %94, %101 : !felt.type, !felt.type
-      %103 = felt.sub %100, %13 : !felt.type, !felt.type
-      %felt_const_0_53 = felt.const  0
-      constrain.eq %103, %felt_const_0_53 : !felt.type, !felt.type
-      %104 = felt.sub %102, %14 : !felt.type, !felt.type
-      %felt_const_0_54 = felt.const  0
-      constrain.eq %104, %felt_const_0_54 : !felt.type, !felt.type
-      %felt_const_1_55 = felt.const  1
-      %105 = felt.sub %70, %felt_const_1_55 : !felt.type, !felt.type
-      %106 = felt.sub %13, %14 : !felt.type, !felt.type
-      %107 = felt.mul %12, %106 : !felt.type, !felt.type
-      %108 = felt.sub %107, %0 : !felt.type, !felt.type
-      %109 = felt.mul %105, %108 : !felt.type, !felt.type
-      %felt_const_0_56 = felt.const  0
-      constrain.eq %109, %felt_const_0_56 : !felt.type, !felt.type
-      %felt_const_1_57 = felt.const  1
-      %110 = felt.sub %0, %felt_const_1_57 : !felt.type, !felt.type
-      %111 = felt.mul %0, %110 : !felt.type, !felt.type
-      %felt_const_0_58 = felt.const  0
-      constrain.eq %111, %felt_const_0_58 : !felt.type, !felt.type
-      %felt_const_1_59 = felt.const  1
-      %112 = felt.sub %7, %felt_const_1_59 : !felt.type, !felt.type
-      %113 = felt.mul %7, %112 : !felt.type, !felt.type
-      %felt_const_0_60 = felt.const  0
-      constrain.eq %113, %felt_const_0_60 : !felt.type, !felt.type
-      %114 = felt.sub %13, %14 : !felt.type, !felt.type
-      %felt_const_65536_61 = felt.const  65536
-      %115 = felt.mul %7, %felt_const_65536_61 : !felt.type, !felt.type
-      %116 = felt.add %114, %115 : !felt.type, !felt.type
-      %117 = felt.mul %0, %116 : !felt.type, !felt.type
-      %felt_const_65536_62 = felt.const  65536
-      %118 = bool.cmp lt(%117, %felt_const_65536_62)
-      %119 = cast.tofelt %118 : i1
-      %felt_const_1_63 = felt.const  1
-      constrain.eq %119, %felt_const_1_63 : !felt.type, !felt.type
-      %felt_const_4 = felt.const  4
-      %120 = felt.add %arg3, %felt_const_4 : !felt.type, !felt.type
-      %121 = struct.readf %arg0[@state_1] : <@SLT<[]>>, !felt.type
-      %122 = struct.readf %arg0[@state_2] : <@SLT<[]>>, !felt.type
-      %felt_const_8 = felt.const  8
-      %felt_const_65536_64 = felt.const  65536
-      %123 = felt.mul %121, %felt_const_65536_64 : !felt.type, !felt.type
-      %124 = felt.add %122, %123 : !felt.type, !felt.type
-      %felt_const_1_65 = felt.const  1
-      %125 = felt.sub %0, %felt_const_1_65 : !felt.type, !felt.type
-      %126 = felt.mul %0, %125 : !felt.type, !felt.type
-      %felt_const_0_66 = felt.const  0
-      constrain.eq %126, %felt_const_0_66 : !felt.type, !felt.type
-      %felt_const_65537 = felt.const  65537
-      %127 = bool.cmp lt(%arg4, %felt_const_65537)
-      %128 = cast.tofelt %127 : i1
-      %felt_const_1_67 = felt.const  1
-      constrain.eq %128, %felt_const_1_67 : !felt.type, !felt.type
-      %felt_const_65536_68 = felt.const  65536
-      %129 = bool.cmp lt(%arg5, %felt_const_65536_68)
-      %130 = cast.tofelt %129 : i1
-      %felt_const_1_69 = felt.const  1
-      constrain.eq %130, %felt_const_1_69 : !felt.type, !felt.type
-      constrain.eq %arg2, %124 : !felt.type, !felt.type
-      %131 = felt.add %124, %felt_const_8 : !felt.type, !felt.type
-      %132 = struct.readf %arg0[@fresh_output_2] : <@SLT<[]>>, !felt.type
-      constrain.eq %132, %120 : !felt.type, !felt.type
-      %felt_const_1_70 = felt.const  1
-      %133 = felt.sub %122, %felt_const_1_70 : !felt.type, !felt.type
-      %felt_const_1864368129 = felt.const  1864368129
-      %134 = felt.mul %133, %felt_const_1864368129 : !felt.type, !felt.type
-      %135 = felt.mul %0, %134 : !felt.type, !felt.type
-      %felt_const_8192 = felt.const  8192
-      %136 = bool.cmp lt(%135, %felt_const_8192)
-      %137 = cast.tofelt %136 : i1
-      %felt_const_1_71 = felt.const  1
-      constrain.eq %137, %felt_const_1_71 : !felt.type, !felt.type
-      %138 = felt.mul %0, %121 : !felt.type, !felt.type
-      %felt_const_256 = felt.const  256
-      %139 = bool.cmp lt(%138, %felt_const_256)
-      %140 = cast.tofelt %139 : i1
-      %felt_const_1_72 = felt.const  1
-      constrain.eq %140, %felt_const_1_72 : !felt.type, !felt.type
-      %felt_const_0_73 = felt.const  0
-      %141 = felt.mul %0, %felt_const_0_73 : !felt.type, !felt.type
-      %felt_const_256_74 = felt.const  256
-      %142 = bool.cmp lt(%141, %felt_const_256_74)
-      %143 = cast.tofelt %142 : i1
-      %felt_const_1_75 = felt.const  1
-      constrain.eq %143, %felt_const_1_75 : !felt.type, !felt.type
-      %felt_const_9 = felt.const  9
-      %144 = felt.mul %felt_const_1, %felt_const_9 : !felt.type, !felt.type
-      %felt_const_10 = felt.const  10
-      %145 = felt.mul %felt_const_0, %felt_const_10 : !felt.type, !felt.type
-      %146 = felt.add %144, %145 : !felt.type, !felt.type
-      %felt_const_2_76 = felt.const  2
-      %147 = felt.mul %felt_const_1, %felt_const_2_76 : !felt.type, !felt.type
+    function.def @constrain(%arg0: !struct.type<@SLT<[]>>, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type, %arg31: !felt.type) attributes {function.allow_constraint} {
       %felt_const_3 = felt.const  3
-      %148 = felt.mul %felt_const_0, %felt_const_3 : !felt.type, !felt.type
-      %149 = felt.add %147, %148 : !felt.type, !felt.type
-      %felt_const_0_77 = felt.const  0
-      %150 = felt.mul %felt_const_1, %felt_const_0_77 : !felt.type, !felt.type
-      %felt_const_0_78 = felt.const  0
-      %151 = felt.mul %felt_const_0, %felt_const_0_78 : !felt.type, !felt.type
-      %152 = felt.add %150, %151 : !felt.type, !felt.type
-      %felt_const_19 = felt.const  19
-      %153 = felt.mul %felt_const_1, %felt_const_19 : !felt.type, !felt.type
-      %felt_const_19_79 = felt.const  19
-      %154 = felt.mul %felt_const_0, %felt_const_19_79 : !felt.type, !felt.type
-      %155 = felt.add %153, %154 : !felt.type, !felt.type
-      %felt_const_51 = felt.const  51
-      %156 = felt.mul %felt_const_1, %felt_const_51 : !felt.type, !felt.type
-      %felt_const_51_80 = felt.const  51
-      %157 = felt.mul %felt_const_0, %felt_const_51_80 : !felt.type, !felt.type
-      %158 = felt.add %156, %157 : !felt.type, !felt.type
-      %159 = felt.mul %arg15, %155 : !felt.type, !felt.type
-      %felt_const_1_81 = felt.const  1
-      %160 = felt.sub %felt_const_1_81, %arg15 : !felt.type, !felt.type
-      %161 = felt.mul %160, %158 : !felt.type, !felt.type
-      %162 = felt.add %159, %161 : !felt.type, !felt.type
-      %163 = felt.sub %arg16, %162 : !felt.type, !felt.type
-      %164 = felt.mul %0, %163 : !felt.type, !felt.type
-      %felt_const_0_82 = felt.const  0
-      constrain.eq %164, %felt_const_0_82 : !felt.type, !felt.type
-      %felt_const_65536_83 = felt.const  65536
-      %165 = felt.mul %121, %felt_const_65536_83 : !felt.type, !felt.type
-      %166 = felt.add %122, %165 : !felt.type, !felt.type
-      %felt_const_0_84 = felt.const  0
-      %167 = felt.add %felt_const_0_84, %7 : !felt.type, !felt.type
-      %felt_const_0_85 = felt.const  0
-      %felt_const_0_86 = felt.const  0
-      %felt_const_0_87 = felt.const  0
-      %168 = struct.readf %arg0[@adapter_12] : <@SLT<[]>>, !felt.type
-      %169 = struct.readf %arg0[@adapter_20] : <@SLT<[]>>, !felt.type
-      %170 = struct.readf %arg0[@adapter_30] : <@SLT<[]>>, !felt.type
-      %felt_const_1_88 = felt.const  1
-      %171 = felt.sub %0, %felt_const_1_88 : !felt.type, !felt.type
-      %172 = felt.mul %0, %171 : !felt.type, !felt.type
-      %felt_const_0_89 = felt.const  0
-      constrain.eq %172, %felt_const_0_89 : !felt.type, !felt.type
-      %felt_const_1_90 = felt.const  1
-      %173 = felt.sub %0, %felt_const_1_90 : !felt.type, !felt.type
-      %felt_const_0_91 = felt.const  0
-      %174 = felt.sub %arg15, %felt_const_0_91 : !felt.type, !felt.type
-      %175 = felt.mul %173, %174 : !felt.type, !felt.type
-      %felt_const_0_92 = felt.const  0
-      constrain.eq %175, %felt_const_0_92 : !felt.type, !felt.type
-      %felt_const_0_93 = felt.const  0
-      %176 = felt.add %felt_const_0_93, %arg25 : !felt.type, !felt.type
-      %felt_const_0_94 = felt.const  0
-      %felt_const_0_95 = felt.const  0
-      %felt_const_0_96 = felt.const  0
-      %felt_const_0_97 = felt.const  0
-      constrain.eq %arg18, %152 : !felt.type, !felt.type
-      %felt_const_0_98 = felt.const  0
-      %177 = felt.sub %167, %felt_const_0_98 : !felt.type, !felt.type
-      %178 = felt.mul %arg14, %177 : !felt.type, !felt.type
-      %felt_const_0_99 = felt.const  0
-      constrain.eq %178, %felt_const_0_99 : !felt.type, !felt.type
-      %felt_const_0_100 = felt.const  0
-      %179 = felt.sub %felt_const_0_85, %felt_const_0_100 : !felt.type, !felt.type
-      %180 = felt.mul %arg14, %179 : !felt.type, !felt.type
-      %felt_const_0_101 = felt.const  0
-      constrain.eq %180, %felt_const_0_101 : !felt.type, !felt.type
-      %felt_const_0_102 = felt.const  0
-      %181 = felt.sub %felt_const_0_86, %felt_const_0_102 : !felt.type, !felt.type
-      %182 = felt.mul %arg14, %181 : !felt.type, !felt.type
-      %felt_const_0_103 = felt.const  0
-      constrain.eq %182, %felt_const_0_103 : !felt.type, !felt.type
-      %felt_const_0_104 = felt.const  0
-      %183 = felt.sub %felt_const_0_87, %felt_const_0_104 : !felt.type, !felt.type
-      %184 = felt.mul %arg14, %183 : !felt.type, !felt.type
-      %felt_const_0_105 = felt.const  0
-      constrain.eq %184, %felt_const_0_105 : !felt.type, !felt.type
-      %felt_const_3_106 = felt.const  3
-      %185 = felt.add %166, %felt_const_3_106 : !felt.type, !felt.type
-      %felt_const_1_107 = felt.const  1
-      %186 = felt.sub %0, %felt_const_1_107 : !felt.type, !felt.type
-      %187 = felt.mul %0, %186 : !felt.type, !felt.type
-      %felt_const_0_108 = felt.const  0
-      constrain.eq %187, %felt_const_0_108 : !felt.type, !felt.type
-      %188 = felt.sub %185, %arg19 : !felt.type, !felt.type
-      %felt_const_1_109 = felt.const  1
-      %189 = felt.sub %188, %felt_const_1_109 : !felt.type, !felt.type
-      %190 = felt.sub %189, %168 : !felt.type, !felt.type
       %felt_const_2130673921 = felt.const  2130673921
-      %191 = felt.mul %190, %felt_const_2130673921 : !felt.type, !felt.type
-      %192 = felt.mul %0, %168 : !felt.type, !felt.type
-      %felt_const_65536_110 = felt.const  65536
-      %193 = bool.cmp lt(%192, %felt_const_65536_110)
+      %felt_const_256 = felt.const  256
+      %felt_const_8192 = felt.const  8192
+      %felt_const_1864368129 = felt.const  1864368129
+      %felt_const_65537 = felt.const  65537
+      %felt_const_4 = felt.const  4
+      %felt_const_32768 = felt.const  32768
+      %felt_const_65536 = felt.const  65536
+      %felt_const_2 = felt.const  2
+      %felt_const_0 = felt.const  0
+      %felt_const_1 = felt.const  1
+      %0 = struct.readf %arg0[@lt_operation_35] : <@SLT<[]>>, !felt.type
+      %1 = struct.readf %arg0[@lt_operation_36] : <@SLT<[]>>, !felt.type
+      %2 = struct.readf %arg0[@lt_operation_37] : <@SLT<[]>>, !felt.type
+      %3 = struct.readf %arg0[@lt_operation_38] : <@SLT<[]>>, !felt.type
+      %4 = struct.readf %arg0[@lt_operation_39] : <@SLT<[]>>, !felt.type
+      %5 = struct.readf %arg0[@lt_operation_40] : <@SLT<[]>>, !felt.type
+      %6 = struct.readf %arg0[@lt_operation_41] : <@SLT<[]>>, !felt.type
+      %7 = struct.readf %arg0[@lt_operation_42] : <@SLT<[]>>, !felt.type
+      %8 = struct.readf %arg0[@lt_operation_43] : <@SLT<[]>>, !felt.type
+      %9 = struct.readf %arg0[@lt_operation_44] : <@SLT<[]>>, !felt.type
+      %10 = felt.sub %8, %felt_const_1 : !felt.type, !felt.type
+      %11 = felt.mul %8, %10 : !felt.type, !felt.type
+      constrain.eq %11, %felt_const_0 : !felt.type, !felt.type
+      %12 = felt.mul %arg26, %felt_const_2 : !felt.type, !felt.type
+      %13 = felt.mul %8, %felt_const_65536 : !felt.type, !felt.type
+      %14 = felt.sub %12, %13 : !felt.type, !felt.type
+      %15 = felt.mul %14, %felt_const_1 : !felt.type, !felt.type
+      %16 = bool.cmp lt(%15, %felt_const_65536)
+      %17 = cast.tofelt %16 : i1
+      constrain.eq %17, %felt_const_1 : !felt.type, !felt.type
+      %18 = felt.sub %9, %felt_const_1 : !felt.type, !felt.type
+      %19 = felt.mul %9, %18 : !felt.type, !felt.type
+      constrain.eq %19, %felt_const_0 : !felt.type, !felt.type
+      %20 = felt.mul %arg31, %felt_const_2 : !felt.type, !felt.type
+      %21 = felt.mul %9, %felt_const_65536 : !felt.type, !felt.type
+      %22 = felt.sub %20, %21 : !felt.type, !felt.type
+      %23 = felt.mul %22, %felt_const_1 : !felt.type, !felt.type
+      %24 = bool.cmp lt(%23, %felt_const_65536)
+      %25 = cast.tofelt %24 : i1
+      constrain.eq %25, %felt_const_1 : !felt.type, !felt.type
+      %26 = felt.mul %8, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %26, %felt_const_0 : !felt.type, !felt.type
+      %27 = felt.mul %9, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %27, %felt_const_0 : !felt.type, !felt.type
+      %28 = felt.add %arg26, %felt_const_32768 : !felt.type, !felt.type
+      %29 = felt.sub %28, %13 : !felt.type, !felt.type
+      %30 = felt.add %arg31, %felt_const_32768 : !felt.type, !felt.type
+      %31 = felt.sub %30, %21 : !felt.type, !felt.type
+      %32 = felt.add %1, %2 : !felt.type, !felt.type
+      %33 = felt.add %32, %3 : !felt.type, !felt.type
+      %34 = felt.add %33, %4 : !felt.type, !felt.type
+      %35 = felt.sub %1, %felt_const_1 : !felt.type, !felt.type
+      %36 = felt.mul %1, %35 : !felt.type, !felt.type
+      constrain.eq %36, %felt_const_0 : !felt.type, !felt.type
+      %37 = felt.sub %2, %felt_const_1 : !felt.type, !felt.type
+      %38 = felt.mul %2, %37 : !felt.type, !felt.type
+      constrain.eq %38, %felt_const_0 : !felt.type, !felt.type
+      %39 = felt.sub %3, %felt_const_1 : !felt.type, !felt.type
+      %40 = felt.mul %3, %39 : !felt.type, !felt.type
+      constrain.eq %40, %felt_const_0 : !felt.type, !felt.type
+      %41 = felt.sub %4, %felt_const_1 : !felt.type, !felt.type
+      %42 = felt.mul %4, %41 : !felt.type, !felt.type
+      constrain.eq %42, %felt_const_0 : !felt.type, !felt.type
+      %43 = felt.sub %34, %felt_const_1 : !felt.type, !felt.type
+      %44 = felt.mul %34, %43 : !felt.type, !felt.type
+      constrain.eq %44, %felt_const_0 : !felt.type, !felt.type
+      %45 = felt.sub %felt_const_1, %34 : !felt.type, !felt.type
+      %46 = felt.add %4, %felt_const_0 : !felt.type, !felt.type
+      %47 = felt.sub %felt_const_1, %46 : !felt.type, !felt.type
+      %48 = felt.sub %29, %31 : !felt.type, !felt.type
+      %49 = felt.mul %47, %48 : !felt.type, !felt.type
+      constrain.eq %49, %felt_const_0 : !felt.type, !felt.type
+      %50 = felt.mul %29, %4 : !felt.type, !felt.type
+      %51 = felt.add %50, %felt_const_0 : !felt.type, !felt.type
+      %52 = felt.mul %31, %4 : !felt.type, !felt.type
+      %53 = felt.add %52, %felt_const_0 : !felt.type, !felt.type
+      %54 = felt.add %46, %3 : !felt.type, !felt.type
+      %55 = felt.sub %felt_const_1, %54 : !felt.type, !felt.type
+      %56 = felt.sub %arg25, %arg30 : !felt.type, !felt.type
+      %57 = felt.mul %55, %56 : !felt.type, !felt.type
+      constrain.eq %57, %felt_const_0 : !felt.type, !felt.type
+      %58 = felt.mul %arg25, %3 : !felt.type, !felt.type
+      %59 = felt.add %51, %58 : !felt.type, !felt.type
+      %60 = felt.mul %arg30, %3 : !felt.type, !felt.type
+      %61 = felt.add %53, %60 : !felt.type, !felt.type
+      %62 = felt.add %54, %2 : !felt.type, !felt.type
+      %63 = felt.sub %felt_const_1, %62 : !felt.type, !felt.type
+      %64 = felt.sub %arg24, %arg29 : !felt.type, !felt.type
+      %65 = felt.mul %63, %64 : !felt.type, !felt.type
+      constrain.eq %65, %felt_const_0 : !felt.type, !felt.type
+      %66 = felt.mul %arg24, %2 : !felt.type, !felt.type
+      %67 = felt.add %59, %66 : !felt.type, !felt.type
+      %68 = felt.mul %arg29, %2 : !felt.type, !felt.type
+      %69 = felt.add %61, %68 : !felt.type, !felt.type
+      %70 = felt.add %62, %1 : !felt.type, !felt.type
+      %71 = felt.sub %felt_const_1, %70 : !felt.type, !felt.type
+      %72 = felt.sub %arg23, %arg28 : !felt.type, !felt.type
+      %73 = felt.mul %71, %72 : !felt.type, !felt.type
+      constrain.eq %73, %felt_const_0 : !felt.type, !felt.type
+      %74 = felt.mul %arg23, %1 : !felt.type, !felt.type
+      %75 = felt.add %67, %74 : !felt.type, !felt.type
+      %76 = felt.mul %arg28, %1 : !felt.type, !felt.type
+      %77 = felt.add %69, %76 : !felt.type, !felt.type
+      %78 = felt.sub %75, %6 : !felt.type, !felt.type
+      constrain.eq %78, %felt_const_0 : !felt.type, !felt.type
+      %79 = felt.sub %77, %7 : !felt.type, !felt.type
+      constrain.eq %79, %felt_const_0 : !felt.type, !felt.type
+      %80 = felt.sub %45, %felt_const_1 : !felt.type, !felt.type
+      %81 = felt.sub %6, %7 : !felt.type, !felt.type
+      %82 = felt.mul %5, %81 : !felt.type, !felt.type
+      %83 = felt.sub %82, %felt_const_1 : !felt.type, !felt.type
+      %84 = felt.mul %80, %83 : !felt.type, !felt.type
+      constrain.eq %84, %felt_const_0 : !felt.type, !felt.type
+      %85 = felt.sub %0, %felt_const_1 : !felt.type, !felt.type
+      %86 = felt.mul %0, %85 : !felt.type, !felt.type
+      constrain.eq %86, %felt_const_0 : !felt.type, !felt.type
+      %87 = felt.mul %0, %felt_const_65536 : !felt.type, !felt.type
+      %88 = felt.add %81, %87 : !felt.type, !felt.type
+      %89 = felt.mul %88, %felt_const_1 : !felt.type, !felt.type
+      %90 = bool.cmp lt(%89, %felt_const_65536)
+      %91 = cast.tofelt %90 : i1
+      constrain.eq %91, %felt_const_1 : !felt.type, !felt.type
+      %92 = felt.add %arg3, %felt_const_4 : !felt.type, !felt.type
+      %93 = struct.readf %arg0[@state_1] : <@SLT<[]>>, !felt.type
+      %94 = struct.readf %arg0[@state_2] : <@SLT<[]>>, !felt.type
+      %95 = felt.mul %93, %felt_const_65536 : !felt.type, !felt.type
+      %96 = felt.add %94, %95 : !felt.type, !felt.type
+      %97 = bool.cmp lt(%arg4, %felt_const_65537)
+      %98 = cast.tofelt %97 : i1
+      constrain.eq %98, %felt_const_1 : !felt.type, !felt.type
+      %99 = bool.cmp lt(%arg5, %felt_const_65536)
+      %100 = cast.tofelt %99 : i1
+      constrain.eq %100, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %arg2, %96 : !felt.type, !felt.type
+      %101 = struct.readf %arg0[@fresh_output_2] : <@SLT<[]>>, !felt.type
+      constrain.eq %101, %92 : !felt.type, !felt.type
+      %102 = felt.sub %94, %felt_const_1 : !felt.type, !felt.type
+      %103 = felt.mul %102, %felt_const_1864368129 : !felt.type, !felt.type
+      %104 = felt.mul %103, %felt_const_1 : !felt.type, !felt.type
+      %105 = bool.cmp lt(%104, %felt_const_8192)
+      %106 = cast.tofelt %105 : i1
+      constrain.eq %106, %felt_const_1 : !felt.type, !felt.type
+      %107 = felt.mul %93, %felt_const_1 : !felt.type, !felt.type
+      %108 = bool.cmp lt(%107, %felt_const_256)
+      %109 = cast.tofelt %108 : i1
+      constrain.eq %109, %felt_const_1 : !felt.type, !felt.type
+      %110 = felt.mul %felt_const_1, %felt_const_0 : !felt.type, !felt.type
+      %111 = bool.cmp lt(%110, %felt_const_256)
+      %112 = cast.tofelt %111 : i1
+      constrain.eq %112, %felt_const_1 : !felt.type, !felt.type
+      %113 = felt.add %0, %felt_const_0 : !felt.type, !felt.type
+      %114 = struct.readf %arg0[@adapter_12] : <@SLT<[]>>, !felt.type
+      %115 = struct.readf %arg0[@adapter_20] : <@SLT<[]>>, !felt.type
+      %116 = struct.readf %arg0[@adapter_30] : <@SLT<[]>>, !felt.type
+      %117 = struct.readf %arg0[@adapter_32] : <@SLT<[]>>, !felt.type
+      %118 = felt.sub %felt_const_1, %117 : !felt.type, !felt.type
+      %119 = felt.sub %118, %felt_const_1 : !felt.type, !felt.type
+      %120 = felt.mul %118, %119 : !felt.type, !felt.type
+      constrain.eq %120, %felt_const_0 : !felt.type, !felt.type
+      %121 = felt.sub %117, %felt_const_1 : !felt.type, !felt.type
+      %122 = felt.mul %117, %121 : !felt.type, !felt.type
+      constrain.eq %122, %felt_const_0 : !felt.type, !felt.type
+      %123 = felt.add %118, %117 : !felt.type, !felt.type
+      %124 = felt.sub %123, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %124, %felt_const_0 : !felt.type, !felt.type
+      %125 = struct.readf %arg0[@fresh_151] : <@SLT<[]>>, !felt.type
+      %126 = felt.sub %125, %felt_const_1 : !felt.type, !felt.type
+      %127 = felt.mul %118, %126 : !felt.type, !felt.type
+      constrain.eq %127, %felt_const_0 : !felt.type, !felt.type
+      %128 = felt.sub %arg15, %felt_const_0 : !felt.type, !felt.type
+      %129 = felt.mul %128, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %129, %felt_const_0 : !felt.type, !felt.type
+      %130 = felt.add %arg22, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %arg8, %130 : !felt.type, !felt.type
+      %131 = felt.sub %113, %felt_const_0 : !felt.type, !felt.type
+      %132 = felt.mul %arg14, %131 : !felt.type, !felt.type
+      constrain.eq %132, %felt_const_0 : !felt.type, !felt.type
+      %133 = felt.mul %arg14, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %133, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %133, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %133, %felt_const_0 : !felt.type, !felt.type
+      %134 = felt.add %96, %felt_const_4 : !felt.type, !felt.type
+      %135 = felt.sub %134, %arg16 : !felt.type, !felt.type
+      %136 = felt.sub %135, %felt_const_1 : !felt.type, !felt.type
+      %137 = felt.sub %136, %114 : !felt.type, !felt.type
+      %138 = felt.mul %137, %felt_const_2130673921 : !felt.type, !felt.type
+      %139 = felt.mul %114, %felt_const_1 : !felt.type, !felt.type
+      %140 = bool.cmp lt(%139, %felt_const_65536)
+      %141 = cast.tofelt %140 : i1
+      constrain.eq %141, %felt_const_1 : !felt.type, !felt.type
+      %142 = felt.mul %138, %felt_const_1 : !felt.type, !felt.type
+      %143 = bool.cmp lt(%142, %felt_const_256)
+      %144 = cast.tofelt %143 : i1
+      constrain.eq %144, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %112, %felt_const_1 : !felt.type, !felt.type
+      %145 = bool.cmp lt(%arg17, %felt_const_65536)
+      %146 = cast.tofelt %145 : i1
+      constrain.eq %146, %felt_const_1 : !felt.type, !felt.type
+      %147 = bool.cmp lt(%arg18, %felt_const_65536)
+      %148 = cast.tofelt %147 : i1
+      constrain.eq %148, %felt_const_1 : !felt.type, !felt.type
+      %149 = bool.cmp lt(%arg19, %felt_const_65536)
+      %150 = cast.tofelt %149 : i1
+      constrain.eq %150, %felt_const_1 : !felt.type, !felt.type
+      %151 = bool.cmp lt(%arg20, %felt_const_65536)
+      %152 = cast.tofelt %151 : i1
+      constrain.eq %152, %felt_const_1 : !felt.type, !felt.type
+      %153 = struct.readf %arg0[@fresh_output_10] : <@SLT<[]>>, !felt.type
+      constrain.eq %153, %113 : !felt.type, !felt.type
+      %154 = felt.add %96, %felt_const_3 : !felt.type, !felt.type
+      %155 = felt.sub %154, %arg21 : !felt.type, !felt.type
+      %156 = felt.sub %155, %felt_const_1 : !felt.type, !felt.type
+      %157 = felt.sub %156, %115 : !felt.type, !felt.type
+      %158 = felt.mul %157, %felt_const_2130673921 : !felt.type, !felt.type
+      %159 = felt.mul %115, %felt_const_1 : !felt.type, !felt.type
+      %160 = bool.cmp lt(%159, %felt_const_65536)
+      %161 = cast.tofelt %160 : i1
+      constrain.eq %161, %felt_const_1 : !felt.type, !felt.type
+      %162 = felt.mul %158, %felt_const_1 : !felt.type, !felt.type
+      %163 = bool.cmp lt(%162, %felt_const_256)
+      %164 = cast.tofelt %163 : i1
+      constrain.eq %164, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %112, %felt_const_1 : !felt.type, !felt.type
+      %165 = bool.cmp lt(%arg23, %felt_const_65536)
+      %166 = cast.tofelt %165 : i1
+      constrain.eq %166, %felt_const_1 : !felt.type, !felt.type
+      %167 = bool.cmp lt(%arg24, %felt_const_65536)
+      %168 = cast.tofelt %167 : i1
+      constrain.eq %168, %felt_const_1 : !felt.type, !felt.type
+      %169 = bool.cmp lt(%arg25, %felt_const_65536)
+      %170 = cast.tofelt %169 : i1
+      constrain.eq %170, %felt_const_1 : !felt.type, !felt.type
+      %171 = bool.cmp lt(%arg26, %felt_const_65536)
+      %172 = cast.tofelt %171 : i1
+      constrain.eq %172, %felt_const_1 : !felt.type, !felt.type
+      %173 = struct.readf %arg0[@fresh_output_15] : <@SLT<[]>>, !felt.type
+      constrain.eq %173, %154 : !felt.type, !felt.type
+      %174 = felt.add %96, %felt_const_2 : !felt.type, !felt.type
+      %175 = felt.sub %felt_const_1, %arg15 : !felt.type, !felt.type
+      %176 = felt.sub %175, %felt_const_1 : !felt.type, !felt.type
+      %177 = felt.mul %175, %176 : !felt.type, !felt.type
+      constrain.eq %177, %felt_const_0 : !felt.type, !felt.type
+      %178 = felt.sub %174, %arg27 : !felt.type, !felt.type
+      %179 = felt.sub %178, %felt_const_1 : !felt.type, !felt.type
+      %180 = felt.sub %179, %116 : !felt.type, !felt.type
+      %181 = felt.mul %180, %felt_const_2130673921 : !felt.type, !felt.type
+      %182 = felt.mul %175, %116 : !felt.type, !felt.type
+      %183 = bool.cmp lt(%182, %felt_const_65536)
+      %184 = cast.tofelt %183 : i1
+      constrain.eq %184, %felt_const_1 : !felt.type, !felt.type
+      %185 = felt.mul %175, %181 : !felt.type, !felt.type
+      %186 = bool.cmp lt(%185, %felt_const_256)
+      %187 = cast.tofelt %186 : i1
+      constrain.eq %187, %felt_const_1 : !felt.type, !felt.type
+      %188 = felt.mul %175, %felt_const_0 : !felt.type, !felt.type
+      %189 = bool.cmp lt(%188, %felt_const_256)
+      %190 = cast.tofelt %189 : i1
+      constrain.eq %190, %felt_const_1 : !felt.type, !felt.type
+      %191 = bool.cmp lt(%arg28, %felt_const_65536)
+      %192 = cast.tofelt %191 : i1
+      constrain.eq %192, %felt_const_1 : !felt.type, !felt.type
+      %193 = bool.cmp lt(%arg29, %felt_const_65536)
       %194 = cast.tofelt %193 : i1
-      %felt_const_1_111 = felt.const  1
-      constrain.eq %194, %felt_const_1_111 : !felt.type, !felt.type
-      %195 = felt.mul %0, %191 : !felt.type, !felt.type
-      %felt_const_256_112 = felt.const  256
-      %196 = bool.cmp lt(%195, %felt_const_256_112)
-      %197 = cast.tofelt %196 : i1
-      %felt_const_1_113 = felt.const  1
-      constrain.eq %197, %felt_const_1_113 : !felt.type, !felt.type
-      %felt_const_0_114 = felt.const  0
-      %198 = felt.mul %0, %felt_const_0_114 : !felt.type, !felt.type
-      %felt_const_256_115 = felt.const  256
-      %199 = bool.cmp lt(%198, %felt_const_256_115)
-      %200 = cast.tofelt %199 : i1
-      %felt_const_1_116 = felt.const  1
-      constrain.eq %200, %felt_const_1_116 : !felt.type, !felt.type
-      %felt_const_0_117 = felt.const  0
-      %felt_const_0_118 = felt.const  0
-      %felt_const_65536_119 = felt.const  65536
-      %201 = bool.cmp lt(%arg20, %felt_const_65536_119)
-      %202 = cast.tofelt %201 : i1
-      %felt_const_1_120 = felt.const  1
-      constrain.eq %202, %felt_const_1_120 : !felt.type, !felt.type
-      %felt_const_65536_121 = felt.const  65536
-      %203 = bool.cmp lt(%arg21, %felt_const_65536_121)
-      %204 = cast.tofelt %203 : i1
-      %felt_const_1_122 = felt.const  1
-      constrain.eq %204, %felt_const_1_122 : !felt.type, !felt.type
-      %felt_const_65536_123 = felt.const  65536
-      %205 = bool.cmp lt(%arg22, %felt_const_65536_123)
-      %206 = cast.tofelt %205 : i1
-      %felt_const_1_124 = felt.const  1
-      constrain.eq %206, %felt_const_1_124 : !felt.type, !felt.type
-      %felt_const_65536_125 = felt.const  65536
-      %207 = bool.cmp lt(%arg23, %felt_const_65536_125)
-      %208 = cast.tofelt %207 : i1
-      %felt_const_1_126 = felt.const  1
-      constrain.eq %208, %felt_const_1_126 : !felt.type, !felt.type
-      %felt_const_0_127 = felt.const  0
-      %felt_const_0_128 = felt.const  0
-      %209 = struct.readf %arg0[@fresh_output_10] : <@SLT<[]>>, !felt.type
-      constrain.eq %209, %167 : !felt.type, !felt.type
-      %felt_const_2_129 = felt.const  2
-      %210 = felt.add %166, %felt_const_2_129 : !felt.type, !felt.type
-      %felt_const_1_130 = felt.const  1
-      %211 = felt.sub %0, %felt_const_1_130 : !felt.type, !felt.type
-      %212 = felt.mul %0, %211 : !felt.type, !felt.type
-      %felt_const_0_131 = felt.const  0
-      constrain.eq %212, %felt_const_0_131 : !felt.type, !felt.type
-      %213 = felt.sub %210, %arg24 : !felt.type, !felt.type
-      %felt_const_1_132 = felt.const  1
-      %214 = felt.sub %213, %felt_const_1_132 : !felt.type, !felt.type
-      %215 = felt.sub %214, %169 : !felt.type, !felt.type
-      %felt_const_2130673921_133 = felt.const  2130673921
-      %216 = felt.mul %215, %felt_const_2130673921_133 : !felt.type, !felt.type
-      %217 = felt.mul %0, %169 : !felt.type, !felt.type
-      %felt_const_65536_134 = felt.const  65536
-      %218 = bool.cmp lt(%217, %felt_const_65536_134)
-      %219 = cast.tofelt %218 : i1
-      %felt_const_1_135 = felt.const  1
-      constrain.eq %219, %felt_const_1_135 : !felt.type, !felt.type
-      %220 = felt.mul %0, %216 : !felt.type, !felt.type
-      %felt_const_256_136 = felt.const  256
-      %221 = bool.cmp lt(%220, %felt_const_256_136)
-      %222 = cast.tofelt %221 : i1
-      %felt_const_1_137 = felt.const  1
-      constrain.eq %222, %felt_const_1_137 : !felt.type, !felt.type
-      %felt_const_0_138 = felt.const  0
-      %223 = felt.mul %0, %felt_const_0_138 : !felt.type, !felt.type
-      %felt_const_256_139 = felt.const  256
-      %224 = bool.cmp lt(%223, %felt_const_256_139)
-      %225 = cast.tofelt %224 : i1
-      %felt_const_1_140 = felt.const  1
-      constrain.eq %225, %felt_const_1_140 : !felt.type, !felt.type
-      %felt_const_0_141 = felt.const  0
-      %felt_const_0_142 = felt.const  0
-      %felt_const_65536_143 = felt.const  65536
-      %226 = bool.cmp lt(%arg26, %felt_const_65536_143)
-      %227 = cast.tofelt %226 : i1
-      %felt_const_1_144 = felt.const  1
-      constrain.eq %227, %felt_const_1_144 : !felt.type, !felt.type
-      %felt_const_65536_145 = felt.const  65536
-      %228 = bool.cmp lt(%arg27, %felt_const_65536_145)
-      %229 = cast.tofelt %228 : i1
-      %felt_const_1_146 = felt.const  1
-      constrain.eq %229, %felt_const_1_146 : !felt.type, !felt.type
-      %felt_const_65536_147 = felt.const  65536
-      %230 = bool.cmp lt(%arg28, %felt_const_65536_147)
-      %231 = cast.tofelt %230 : i1
-      %felt_const_1_148 = felt.const  1
-      constrain.eq %231, %felt_const_1_148 : !felt.type, !felt.type
-      %felt_const_65536_149 = felt.const  65536
-      %232 = bool.cmp lt(%arg29, %felt_const_65536_149)
-      %233 = cast.tofelt %232 : i1
-      %felt_const_1_150 = felt.const  1
-      constrain.eq %233, %felt_const_1_150 : !felt.type, !felt.type
-      %felt_const_0_151 = felt.const  0
-      %felt_const_0_152 = felt.const  0
-      %234 = struct.readf %arg0[@fresh_output_15] : <@SLT<[]>>, !felt.type
-      constrain.eq %234, %210 : !felt.type, !felt.type
-      %felt_const_1_153 = felt.const  1
-      %235 = felt.add %166, %felt_const_1_153 : !felt.type, !felt.type
-      %236 = felt.sub %0, %arg15 : !felt.type, !felt.type
-      %felt_const_1_154 = felt.const  1
-      %237 = felt.sub %236, %felt_const_1_154 : !felt.type, !felt.type
-      %238 = felt.mul %236, %237 : !felt.type, !felt.type
-      %felt_const_0_155 = felt.const  0
-      constrain.eq %238, %felt_const_0_155 : !felt.type, !felt.type
-      %239 = felt.sub %235, %arg30 : !felt.type, !felt.type
-      %felt_const_1_156 = felt.const  1
-      %240 = felt.sub %239, %felt_const_1_156 : !felt.type, !felt.type
-      %241 = felt.sub %240, %170 : !felt.type, !felt.type
-      %felt_const_2130673921_157 = felt.const  2130673921
-      %242 = felt.mul %241, %felt_const_2130673921_157 : !felt.type, !felt.type
-      %243 = felt.mul %236, %170 : !felt.type, !felt.type
-      %felt_const_65536_158 = felt.const  65536
-      %244 = bool.cmp lt(%243, %felt_const_65536_158)
-      %245 = cast.tofelt %244 : i1
-      %felt_const_1_159 = felt.const  1
-      constrain.eq %245, %felt_const_1_159 : !felt.type, !felt.type
-      %246 = felt.mul %236, %242 : !felt.type, !felt.type
-      %felt_const_256_160 = felt.const  256
-      %247 = bool.cmp lt(%246, %felt_const_256_160)
-      %248 = cast.tofelt %247 : i1
-      %felt_const_1_161 = felt.const  1
-      constrain.eq %248, %felt_const_1_161 : !felt.type, !felt.type
-      %felt_const_0_162 = felt.const  0
-      %249 = felt.mul %236, %felt_const_0_162 : !felt.type, !felt.type
-      %felt_const_256_163 = felt.const  256
-      %250 = bool.cmp lt(%249, %felt_const_256_163)
-      %251 = cast.tofelt %250 : i1
-      %felt_const_1_164 = felt.const  1
-      constrain.eq %251, %felt_const_1_164 : !felt.type, !felt.type
-      %felt_const_0_165 = felt.const  0
-      %felt_const_0_166 = felt.const  0
-      %felt_const_65536_167 = felt.const  65536
-      %252 = bool.cmp lt(%arg31, %felt_const_65536_167)
-      %253 = cast.tofelt %252 : i1
-      %felt_const_1_168 = felt.const  1
-      constrain.eq %253, %felt_const_1_168 : !felt.type, !felt.type
-      %felt_const_65536_169 = felt.const  65536
-      %254 = bool.cmp lt(%arg32, %felt_const_65536_169)
-      %255 = cast.tofelt %254 : i1
-      %felt_const_1_170 = felt.const  1
-      constrain.eq %255, %felt_const_1_170 : !felt.type, !felt.type
-      %felt_const_65536_171 = felt.const  65536
-      %256 = bool.cmp lt(%arg33, %felt_const_65536_171)
-      %257 = cast.tofelt %256 : i1
-      %felt_const_1_172 = felt.const  1
-      constrain.eq %257, %felt_const_1_172 : !felt.type, !felt.type
-      %felt_const_65536_173 = felt.const  65536
-      %258 = bool.cmp lt(%arg34, %felt_const_65536_173)
-      %259 = cast.tofelt %258 : i1
-      %felt_const_1_174 = felt.const  1
-      constrain.eq %259, %felt_const_1_174 : !felt.type, !felt.type
-      %felt_const_0_175 = felt.const  0
-      %felt_const_0_176 = felt.const  0
-      %260 = struct.readf %arg0[@fresh_output_24] : <@SLT<[]>>, !felt.type
-      constrain.eq %260, %235 : !felt.type, !felt.type
-      %261 = felt.sub %arg31, %arg10 : !felt.type, !felt.type
-      %262 = felt.mul %arg15, %261 : !felt.type, !felt.type
-      %felt_const_0_177 = felt.const  0
-      constrain.eq %262, %felt_const_0_177 : !felt.type, !felt.type
-      %263 = felt.sub %arg32, %arg11 : !felt.type, !felt.type
-      %264 = felt.mul %arg15, %263 : !felt.type, !felt.type
-      %felt_const_0_178 = felt.const  0
-      constrain.eq %264, %felt_const_0_178 : !felt.type, !felt.type
-      %265 = felt.sub %arg33, %arg12 : !felt.type, !felt.type
-      %266 = felt.mul %arg15, %265 : !felt.type, !felt.type
-      %felt_const_0_179 = felt.const  0
-      constrain.eq %266, %felt_const_0_179 : !felt.type, !felt.type
-      %267 = felt.sub %arg34, %arg13 : !felt.type, !felt.type
-      %268 = felt.mul %arg15, %267 : !felt.type, !felt.type
-      %felt_const_0_180 = felt.const  0
-      constrain.eq %268, %felt_const_0_180 : !felt.type, !felt.type
+      constrain.eq %194, %felt_const_1 : !felt.type, !felt.type
+      %195 = bool.cmp lt(%arg30, %felt_const_65536)
+      %196 = cast.tofelt %195 : i1
+      constrain.eq %196, %felt_const_1 : !felt.type, !felt.type
+      %197 = bool.cmp lt(%arg31, %felt_const_65536)
+      %198 = cast.tofelt %197 : i1
+      constrain.eq %198, %felt_const_1 : !felt.type, !felt.type
+      %199 = struct.readf %arg0[@fresh_output_24] : <@SLT<[]>>, !felt.type
+      constrain.eq %199, %174 : !felt.type, !felt.type
+      %200 = felt.sub %arg28, %arg10 : !felt.type, !felt.type
+      %201 = felt.mul %arg15, %200 : !felt.type, !felt.type
+      constrain.eq %201, %felt_const_0 : !felt.type, !felt.type
+      %202 = felt.sub %arg29, %arg11 : !felt.type, !felt.type
+      %203 = felt.mul %arg15, %202 : !felt.type, !felt.type
+      constrain.eq %203, %felt_const_0 : !felt.type, !felt.type
+      %204 = felt.sub %arg30, %arg12 : !felt.type, !felt.type
+      %205 = felt.mul %arg15, %204 : !felt.type, !felt.type
+      constrain.eq %205, %felt_const_0 : !felt.type, !felt.type
+      %206 = felt.sub %arg31, %arg13 : !felt.type, !felt.type
+      %207 = felt.mul %arg15, %206 : !felt.type, !felt.type
+      constrain.eq %207, %felt_const_0 : !felt.type, !felt.type
       function.return
     }
+    struct.field @fresh_151 : !felt.type
   }
   struct.def @SLTU<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @fresh_output_10 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
-    struct.field @adapter_26 : !felt.type {llzk.pub}
-    struct.field @adapter_27 : !felt.type {llzk.pub}
-    struct.field @adapter_28 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
     struct.field @adapter_20 : !felt.type
     struct.field @adapter_30 : !felt.type
-    struct.field @is_slt_32 : !felt.type
-    struct.field @is_sltu_33 : !felt.type
+    struct.field @adapter_32 : !felt.type
+    struct.field @is_slt_33 : !felt.type
+    struct.field @is_sltu_34 : !felt.type
     struct.field @lt_operation_35 : !felt.type
     struct.field @lt_operation_36 : !felt.type
     struct.field @lt_operation_37 : !felt.type
@@ -627,556 +344,299 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @lt_operation_42 : !felt.type
     struct.field @lt_operation_43 : !felt.type
     struct.field @lt_operation_44 : !felt.type
-    function.def @compute(%arg0: !felt.type, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type, %arg31: !felt.type, %arg32: !felt.type, %arg33: !felt.type) -> !struct.type<@SLTU<[]>> attributes {function.allow_witness} {
+    function.def @compute(%arg0: !felt.type, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type) -> !struct.type<@SLTU<[]>> attributes {function.allow_witness} {
       %self = struct.new : <@SLTU<[]>>
       function.return %self : !struct.type<@SLTU<[]>>
     }
-    function.def @constrain(%arg0: !struct.type<@SLTU<[]>>, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type, %arg31: !felt.type, %arg32: !felt.type, %arg33: !felt.type, %arg34: !felt.type) attributes {function.allow_constraint} {
-      %felt_const_0 = felt.const  0
-      %felt_const_1 = felt.const  1
-      %0 = felt.add %felt_const_0, %felt_const_1 : !felt.type, !felt.type
-      %felt_const_1_0 = felt.const  1
-      %1 = felt.sub %felt_const_0, %felt_const_1_0 : !felt.type, !felt.type
-      %2 = felt.mul %felt_const_0, %1 : !felt.type, !felt.type
-      %felt_const_0_1 = felt.const  0
-      constrain.eq %2, %felt_const_0_1 : !felt.type, !felt.type
-      %felt_const_1_2 = felt.const  1
-      %3 = felt.sub %felt_const_1, %felt_const_1_2 : !felt.type, !felt.type
-      %4 = felt.mul %felt_const_1, %3 : !felt.type, !felt.type
-      %felt_const_0_3 = felt.const  0
-      constrain.eq %4, %felt_const_0_3 : !felt.type, !felt.type
-      %felt_const_1_4 = felt.const  1
-      %5 = felt.sub %0, %felt_const_1_4 : !felt.type, !felt.type
-      %6 = felt.mul %0, %5 : !felt.type, !felt.type
-      %felt_const_0_5 = felt.const  0
-      constrain.eq %6, %felt_const_0_5 : !felt.type, !felt.type
-      %7 = struct.readf %arg0[@lt_operation_35] : <@SLTU<[]>>, !felt.type
-      %8 = struct.readf %arg0[@lt_operation_36] : <@SLTU<[]>>, !felt.type
-      %9 = struct.readf %arg0[@lt_operation_37] : <@SLTU<[]>>, !felt.type
-      %10 = struct.readf %arg0[@lt_operation_38] : <@SLTU<[]>>, !felt.type
-      %11 = struct.readf %arg0[@lt_operation_39] : <@SLTU<[]>>, !felt.type
-      %12 = struct.readf %arg0[@lt_operation_40] : <@SLTU<[]>>, !felt.type
-      %13 = struct.readf %arg0[@lt_operation_41] : <@SLTU<[]>>, !felt.type
-      %14 = struct.readf %arg0[@lt_operation_42] : <@SLTU<[]>>, !felt.type
-      %15 = struct.readf %arg0[@lt_operation_43] : <@SLTU<[]>>, !felt.type
-      %16 = struct.readf %arg0[@lt_operation_44] : <@SLTU<[]>>, !felt.type
-      %felt_const_1_6 = felt.const  1
-      %17 = felt.sub %felt_const_0, %felt_const_1_6 : !felt.type, !felt.type
-      %18 = felt.mul %felt_const_0, %17 : !felt.type, !felt.type
-      %felt_const_0_7 = felt.const  0
-      constrain.eq %18, %felt_const_0_7 : !felt.type, !felt.type
-      %felt_const_1_8 = felt.const  1
-      %19 = felt.sub %0, %felt_const_1_8 : !felt.type, !felt.type
-      %20 = felt.mul %0, %19 : !felt.type, !felt.type
-      %felt_const_0_9 = felt.const  0
-      constrain.eq %20, %felt_const_0_9 : !felt.type, !felt.type
-      %felt_const_1_10 = felt.const  1
-      %21 = felt.sub %0, %felt_const_1_10 : !felt.type, !felt.type
-      %22 = felt.mul %21, %felt_const_0 : !felt.type, !felt.type
-      %felt_const_0_11 = felt.const  0
-      constrain.eq %22, %felt_const_0_11 : !felt.type, !felt.type
-      %felt_const_1_12 = felt.const  1
-      %23 = felt.sub %felt_const_0, %felt_const_1_12 : !felt.type, !felt.type
-      %24 = felt.mul %felt_const_0, %23 : !felt.type, !felt.type
-      %felt_const_0_13 = felt.const  0
-      constrain.eq %24, %felt_const_0_13 : !felt.type, !felt.type
-      %felt_const_1_14 = felt.const  1
-      %25 = felt.sub %15, %felt_const_1_14 : !felt.type, !felt.type
-      %26 = felt.mul %15, %25 : !felt.type, !felt.type
-      %felt_const_0_15 = felt.const  0
-      constrain.eq %26, %felt_const_0_15 : !felt.type, !felt.type
-      %felt_const_2 = felt.const  2
-      %27 = felt.mul %felt_const_2, %arg29 : !felt.type, !felt.type
-      %felt_const_65536 = felt.const  65536
-      %28 = felt.mul %15, %felt_const_65536 : !felt.type, !felt.type
-      %29 = felt.sub %27, %28 : !felt.type, !felt.type
-      %30 = felt.mul %felt_const_0, %29 : !felt.type, !felt.type
-      %felt_const_65536_16 = felt.const  65536
-      %31 = bool.cmp lt(%30, %felt_const_65536_16)
-      %32 = cast.tofelt %31 : i1
-      %felt_const_1_17 = felt.const  1
-      constrain.eq %32, %felt_const_1_17 : !felt.type, !felt.type
-      %felt_const_1_18 = felt.const  1
-      %33 = felt.sub %felt_const_0, %felt_const_1_18 : !felt.type, !felt.type
-      %34 = felt.mul %felt_const_0, %33 : !felt.type, !felt.type
-      %felt_const_0_19 = felt.const  0
-      constrain.eq %34, %felt_const_0_19 : !felt.type, !felt.type
-      %felt_const_1_20 = felt.const  1
-      %35 = felt.sub %16, %felt_const_1_20 : !felt.type, !felt.type
-      %36 = felt.mul %16, %35 : !felt.type, !felt.type
-      %felt_const_0_21 = felt.const  0
-      constrain.eq %36, %felt_const_0_21 : !felt.type, !felt.type
-      %felt_const_2_22 = felt.const  2
-      %37 = felt.mul %felt_const_2_22, %arg34 : !felt.type, !felt.type
-      %felt_const_65536_23 = felt.const  65536
-      %38 = felt.mul %16, %felt_const_65536_23 : !felt.type, !felt.type
-      %39 = felt.sub %37, %38 : !felt.type, !felt.type
-      %40 = felt.mul %felt_const_0, %39 : !felt.type, !felt.type
-      %felt_const_65536_24 = felt.const  65536
-      %41 = bool.cmp lt(%40, %felt_const_65536_24)
-      %42 = cast.tofelt %41 : i1
-      %felt_const_1_25 = felt.const  1
-      constrain.eq %42, %felt_const_1_25 : !felt.type, !felt.type
-      %felt_const_1_26 = felt.const  1
-      %43 = felt.sub %felt_const_0, %felt_const_1_26 : !felt.type, !felt.type
-      %44 = felt.mul %43, %15 : !felt.type, !felt.type
-      %felt_const_0_27 = felt.const  0
-      constrain.eq %44, %felt_const_0_27 : !felt.type, !felt.type
-      %felt_const_1_28 = felt.const  1
-      %45 = felt.sub %felt_const_0, %felt_const_1_28 : !felt.type, !felt.type
-      %46 = felt.mul %45, %16 : !felt.type, !felt.type
-      %felt_const_0_29 = felt.const  0
-      constrain.eq %46, %felt_const_0_29 : !felt.type, !felt.type
-      %felt_const_32768 = felt.const  32768
-      %47 = felt.mul %felt_const_0, %felt_const_32768 : !felt.type, !felt.type
-      %48 = felt.add %arg29, %47 : !felt.type, !felt.type
-      %felt_const_65536_30 = felt.const  65536
-      %49 = felt.mul %felt_const_65536_30, %15 : !felt.type, !felt.type
-      %50 = felt.sub %48, %49 : !felt.type, !felt.type
-      %felt_const_32768_31 = felt.const  32768
-      %51 = felt.mul %felt_const_0, %felt_const_32768_31 : !felt.type, !felt.type
-      %52 = felt.add %arg34, %51 : !felt.type, !felt.type
-      %felt_const_65536_32 = felt.const  65536
-      %53 = felt.mul %felt_const_65536_32, %16 : !felt.type, !felt.type
-      %54 = felt.sub %52, %53 : !felt.type, !felt.type
-      %felt_const_1_33 = felt.const  1
-      %55 = felt.sub %0, %felt_const_1_33 : !felt.type, !felt.type
-      %56 = felt.mul %0, %55 : !felt.type, !felt.type
-      %felt_const_0_34 = felt.const  0
-      constrain.eq %56, %felt_const_0_34 : !felt.type, !felt.type
-      %57 = felt.add %8, %9 : !felt.type, !felt.type
-      %58 = felt.add %57, %10 : !felt.type, !felt.type
-      %59 = felt.add %58, %11 : !felt.type, !felt.type
-      %felt_const_1_35 = felt.const  1
-      %60 = felt.sub %8, %felt_const_1_35 : !felt.type, !felt.type
-      %61 = felt.mul %8, %60 : !felt.type, !felt.type
-      %felt_const_0_36 = felt.const  0
-      constrain.eq %61, %felt_const_0_36 : !felt.type, !felt.type
-      %felt_const_1_37 = felt.const  1
-      %62 = felt.sub %9, %felt_const_1_37 : !felt.type, !felt.type
-      %63 = felt.mul %9, %62 : !felt.type, !felt.type
-      %felt_const_0_38 = felt.const  0
-      constrain.eq %63, %felt_const_0_38 : !felt.type, !felt.type
-      %felt_const_1_39 = felt.const  1
-      %64 = felt.sub %10, %felt_const_1_39 : !felt.type, !felt.type
-      %65 = felt.mul %10, %64 : !felt.type, !felt.type
-      %felt_const_0_40 = felt.const  0
-      constrain.eq %65, %felt_const_0_40 : !felt.type, !felt.type
-      %felt_const_1_41 = felt.const  1
-      %66 = felt.sub %11, %felt_const_1_41 : !felt.type, !felt.type
-      %67 = felt.mul %11, %66 : !felt.type, !felt.type
-      %felt_const_0_42 = felt.const  0
-      constrain.eq %67, %felt_const_0_42 : !felt.type, !felt.type
-      %felt_const_1_43 = felt.const  1
-      %68 = felt.sub %59, %felt_const_1_43 : !felt.type, !felt.type
-      %69 = felt.mul %59, %68 : !felt.type, !felt.type
-      %felt_const_0_44 = felt.const  0
-      constrain.eq %69, %felt_const_0_44 : !felt.type, !felt.type
-      %felt_const_1_45 = felt.const  1
-      %70 = felt.sub %felt_const_1_45, %59 : !felt.type, !felt.type
-      %felt_const_0_46 = felt.const  0
-      %71 = felt.add %felt_const_0_46, %11 : !felt.type, !felt.type
-      %72 = felt.sub %0, %71 : !felt.type, !felt.type
-      %73 = felt.sub %50, %54 : !felt.type, !felt.type
-      %74 = felt.mul %72, %73 : !felt.type, !felt.type
-      %felt_const_0_47 = felt.const  0
-      constrain.eq %74, %felt_const_0_47 : !felt.type, !felt.type
-      %75 = felt.mul %50, %11 : !felt.type, !felt.type
-      %felt_const_0_48 = felt.const  0
-      %76 = felt.add %felt_const_0_48, %75 : !felt.type, !felt.type
-      %77 = felt.mul %54, %11 : !felt.type, !felt.type
-      %felt_const_0_49 = felt.const  0
-      %78 = felt.add %felt_const_0_49, %77 : !felt.type, !felt.type
-      %79 = felt.add %71, %10 : !felt.type, !felt.type
-      %80 = felt.sub %0, %79 : !felt.type, !felt.type
-      %81 = felt.sub %arg28, %arg33 : !felt.type, !felt.type
-      %82 = felt.mul %80, %81 : !felt.type, !felt.type
-      %felt_const_0_50 = felt.const  0
-      constrain.eq %82, %felt_const_0_50 : !felt.type, !felt.type
-      %83 = felt.mul %arg28, %10 : !felt.type, !felt.type
-      %84 = felt.add %76, %83 : !felt.type, !felt.type
-      %85 = felt.mul %arg33, %10 : !felt.type, !felt.type
-      %86 = felt.add %78, %85 : !felt.type, !felt.type
-      %87 = felt.add %79, %9 : !felt.type, !felt.type
-      %88 = felt.sub %0, %87 : !felt.type, !felt.type
-      %89 = felt.sub %arg27, %arg32 : !felt.type, !felt.type
-      %90 = felt.mul %88, %89 : !felt.type, !felt.type
-      %felt_const_0_51 = felt.const  0
-      constrain.eq %90, %felt_const_0_51 : !felt.type, !felt.type
-      %91 = felt.mul %arg27, %9 : !felt.type, !felt.type
-      %92 = felt.add %84, %91 : !felt.type, !felt.type
-      %93 = felt.mul %arg32, %9 : !felt.type, !felt.type
-      %94 = felt.add %86, %93 : !felt.type, !felt.type
-      %95 = felt.add %87, %8 : !felt.type, !felt.type
-      %96 = felt.sub %0, %95 : !felt.type, !felt.type
-      %97 = felt.sub %arg26, %arg31 : !felt.type, !felt.type
-      %98 = felt.mul %96, %97 : !felt.type, !felt.type
-      %felt_const_0_52 = felt.const  0
-      constrain.eq %98, %felt_const_0_52 : !felt.type, !felt.type
-      %99 = felt.mul %arg26, %8 : !felt.type, !felt.type
-      %100 = felt.add %92, %99 : !felt.type, !felt.type
-      %101 = felt.mul %arg31, %8 : !felt.type, !felt.type
-      %102 = felt.add %94, %101 : !felt.type, !felt.type
-      %103 = felt.sub %100, %13 : !felt.type, !felt.type
-      %felt_const_0_53 = felt.const  0
-      constrain.eq %103, %felt_const_0_53 : !felt.type, !felt.type
-      %104 = felt.sub %102, %14 : !felt.type, !felt.type
-      %felt_const_0_54 = felt.const  0
-      constrain.eq %104, %felt_const_0_54 : !felt.type, !felt.type
-      %felt_const_1_55 = felt.const  1
-      %105 = felt.sub %70, %felt_const_1_55 : !felt.type, !felt.type
-      %106 = felt.sub %13, %14 : !felt.type, !felt.type
-      %107 = felt.mul %12, %106 : !felt.type, !felt.type
-      %108 = felt.sub %107, %0 : !felt.type, !felt.type
-      %109 = felt.mul %105, %108 : !felt.type, !felt.type
-      %felt_const_0_56 = felt.const  0
-      constrain.eq %109, %felt_const_0_56 : !felt.type, !felt.type
-      %felt_const_1_57 = felt.const  1
-      %110 = felt.sub %0, %felt_const_1_57 : !felt.type, !felt.type
-      %111 = felt.mul %0, %110 : !felt.type, !felt.type
-      %felt_const_0_58 = felt.const  0
-      constrain.eq %111, %felt_const_0_58 : !felt.type, !felt.type
-      %felt_const_1_59 = felt.const  1
-      %112 = felt.sub %7, %felt_const_1_59 : !felt.type, !felt.type
-      %113 = felt.mul %7, %112 : !felt.type, !felt.type
-      %felt_const_0_60 = felt.const  0
-      constrain.eq %113, %felt_const_0_60 : !felt.type, !felt.type
-      %114 = felt.sub %13, %14 : !felt.type, !felt.type
-      %felt_const_65536_61 = felt.const  65536
-      %115 = felt.mul %7, %felt_const_65536_61 : !felt.type, !felt.type
-      %116 = felt.add %114, %115 : !felt.type, !felt.type
-      %117 = felt.mul %0, %116 : !felt.type, !felt.type
-      %felt_const_65536_62 = felt.const  65536
-      %118 = bool.cmp lt(%117, %felt_const_65536_62)
-      %119 = cast.tofelt %118 : i1
-      %felt_const_1_63 = felt.const  1
-      constrain.eq %119, %felt_const_1_63 : !felt.type, !felt.type
-      %felt_const_4 = felt.const  4
-      %120 = felt.add %arg3, %felt_const_4 : !felt.type, !felt.type
-      %121 = struct.readf %arg0[@state_1] : <@SLTU<[]>>, !felt.type
-      %122 = struct.readf %arg0[@state_2] : <@SLTU<[]>>, !felt.type
-      %felt_const_8 = felt.const  8
-      %felt_const_65536_64 = felt.const  65536
-      %123 = felt.mul %121, %felt_const_65536_64 : !felt.type, !felt.type
-      %124 = felt.add %122, %123 : !felt.type, !felt.type
-      %felt_const_1_65 = felt.const  1
-      %125 = felt.sub %0, %felt_const_1_65 : !felt.type, !felt.type
-      %126 = felt.mul %0, %125 : !felt.type, !felt.type
-      %felt_const_0_66 = felt.const  0
-      constrain.eq %126, %felt_const_0_66 : !felt.type, !felt.type
-      %felt_const_65537 = felt.const  65537
-      %127 = bool.cmp lt(%arg4, %felt_const_65537)
-      %128 = cast.tofelt %127 : i1
-      %felt_const_1_67 = felt.const  1
-      constrain.eq %128, %felt_const_1_67 : !felt.type, !felt.type
-      %felt_const_65536_68 = felt.const  65536
-      %129 = bool.cmp lt(%arg5, %felt_const_65536_68)
-      %130 = cast.tofelt %129 : i1
-      %felt_const_1_69 = felt.const  1
-      constrain.eq %130, %felt_const_1_69 : !felt.type, !felt.type
-      constrain.eq %arg2, %124 : !felt.type, !felt.type
-      %131 = felt.add %124, %felt_const_8 : !felt.type, !felt.type
-      %132 = struct.readf %arg0[@fresh_output_2] : <@SLTU<[]>>, !felt.type
-      constrain.eq %132, %120 : !felt.type, !felt.type
-      %felt_const_1_70 = felt.const  1
-      %133 = felt.sub %122, %felt_const_1_70 : !felt.type, !felt.type
-      %felt_const_1864368129 = felt.const  1864368129
-      %134 = felt.mul %133, %felt_const_1864368129 : !felt.type, !felt.type
-      %135 = felt.mul %0, %134 : !felt.type, !felt.type
-      %felt_const_8192 = felt.const  8192
-      %136 = bool.cmp lt(%135, %felt_const_8192)
-      %137 = cast.tofelt %136 : i1
-      %felt_const_1_71 = felt.const  1
-      constrain.eq %137, %felt_const_1_71 : !felt.type, !felt.type
-      %138 = felt.mul %0, %121 : !felt.type, !felt.type
-      %felt_const_256 = felt.const  256
-      %139 = bool.cmp lt(%138, %felt_const_256)
-      %140 = cast.tofelt %139 : i1
-      %felt_const_1_72 = felt.const  1
-      constrain.eq %140, %felt_const_1_72 : !felt.type, !felt.type
-      %felt_const_0_73 = felt.const  0
-      %141 = felt.mul %0, %felt_const_0_73 : !felt.type, !felt.type
-      %felt_const_256_74 = felt.const  256
-      %142 = bool.cmp lt(%141, %felt_const_256_74)
-      %143 = cast.tofelt %142 : i1
-      %felt_const_1_75 = felt.const  1
-      constrain.eq %143, %felt_const_1_75 : !felt.type, !felt.type
-      %felt_const_9 = felt.const  9
-      %144 = felt.mul %felt_const_0, %felt_const_9 : !felt.type, !felt.type
-      %felt_const_10 = felt.const  10
-      %145 = felt.mul %felt_const_1, %felt_const_10 : !felt.type, !felt.type
-      %146 = felt.add %144, %145 : !felt.type, !felt.type
-      %felt_const_2_76 = felt.const  2
-      %147 = felt.mul %felt_const_0, %felt_const_2_76 : !felt.type, !felt.type
-      %felt_const_3 = felt.const  3
-      %148 = felt.mul %felt_const_1, %felt_const_3 : !felt.type, !felt.type
-      %149 = felt.add %147, %148 : !felt.type, !felt.type
-      %felt_const_0_77 = felt.const  0
-      %150 = felt.mul %felt_const_0, %felt_const_0_77 : !felt.type, !felt.type
-      %felt_const_0_78 = felt.const  0
-      %151 = felt.mul %felt_const_1, %felt_const_0_78 : !felt.type, !felt.type
-      %152 = felt.add %150, %151 : !felt.type, !felt.type
-      %felt_const_19 = felt.const  19
-      %153 = felt.mul %felt_const_0, %felt_const_19 : !felt.type, !felt.type
-      %felt_const_19_79 = felt.const  19
-      %154 = felt.mul %felt_const_1, %felt_const_19_79 : !felt.type, !felt.type
-      %155 = felt.add %153, %154 : !felt.type, !felt.type
-      %felt_const_51 = felt.const  51
-      %156 = felt.mul %felt_const_0, %felt_const_51 : !felt.type, !felt.type
-      %felt_const_51_80 = felt.const  51
-      %157 = felt.mul %felt_const_1, %felt_const_51_80 : !felt.type, !felt.type
-      %158 = felt.add %156, %157 : !felt.type, !felt.type
-      %159 = felt.mul %arg15, %155 : !felt.type, !felt.type
-      %felt_const_1_81 = felt.const  1
-      %160 = felt.sub %felt_const_1_81, %arg15 : !felt.type, !felt.type
-      %161 = felt.mul %160, %158 : !felt.type, !felt.type
-      %162 = felt.add %159, %161 : !felt.type, !felt.type
-      %163 = felt.sub %arg16, %162 : !felt.type, !felt.type
-      %164 = felt.mul %0, %163 : !felt.type, !felt.type
-      %felt_const_0_82 = felt.const  0
-      constrain.eq %164, %felt_const_0_82 : !felt.type, !felt.type
-      %felt_const_65536_83 = felt.const  65536
-      %165 = felt.mul %121, %felt_const_65536_83 : !felt.type, !felt.type
-      %166 = felt.add %122, %165 : !felt.type, !felt.type
-      %felt_const_0_84 = felt.const  0
-      %167 = felt.add %felt_const_0_84, %7 : !felt.type, !felt.type
-      %felt_const_0_85 = felt.const  0
-      %felt_const_0_86 = felt.const  0
-      %felt_const_0_87 = felt.const  0
-      %168 = struct.readf %arg0[@adapter_12] : <@SLTU<[]>>, !felt.type
-      %169 = struct.readf %arg0[@adapter_20] : <@SLTU<[]>>, !felt.type
-      %170 = struct.readf %arg0[@adapter_30] : <@SLTU<[]>>, !felt.type
-      %felt_const_1_88 = felt.const  1
-      %171 = felt.sub %0, %felt_const_1_88 : !felt.type, !felt.type
-      %172 = felt.mul %0, %171 : !felt.type, !felt.type
-      %felt_const_0_89 = felt.const  0
-      constrain.eq %172, %felt_const_0_89 : !felt.type, !felt.type
-      %felt_const_1_90 = felt.const  1
-      %173 = felt.sub %0, %felt_const_1_90 : !felt.type, !felt.type
-      %felt_const_0_91 = felt.const  0
-      %174 = felt.sub %arg15, %felt_const_0_91 : !felt.type, !felt.type
-      %175 = felt.mul %173, %174 : !felt.type, !felt.type
-      %felt_const_0_92 = felt.const  0
-      constrain.eq %175, %felt_const_0_92 : !felt.type, !felt.type
-      %felt_const_0_93 = felt.const  0
-      %176 = felt.add %felt_const_0_93, %arg25 : !felt.type, !felt.type
-      %felt_const_0_94 = felt.const  0
-      %felt_const_0_95 = felt.const  0
-      %felt_const_0_96 = felt.const  0
-      %felt_const_0_97 = felt.const  0
-      constrain.eq %arg18, %152 : !felt.type, !felt.type
-      %felt_const_0_98 = felt.const  0
-      %177 = felt.sub %167, %felt_const_0_98 : !felt.type, !felt.type
-      %178 = felt.mul %arg14, %177 : !felt.type, !felt.type
-      %felt_const_0_99 = felt.const  0
-      constrain.eq %178, %felt_const_0_99 : !felt.type, !felt.type
-      %felt_const_0_100 = felt.const  0
-      %179 = felt.sub %felt_const_0_85, %felt_const_0_100 : !felt.type, !felt.type
-      %180 = felt.mul %arg14, %179 : !felt.type, !felt.type
-      %felt_const_0_101 = felt.const  0
-      constrain.eq %180, %felt_const_0_101 : !felt.type, !felt.type
-      %felt_const_0_102 = felt.const  0
-      %181 = felt.sub %felt_const_0_86, %felt_const_0_102 : !felt.type, !felt.type
-      %182 = felt.mul %arg14, %181 : !felt.type, !felt.type
-      %felt_const_0_103 = felt.const  0
-      constrain.eq %182, %felt_const_0_103 : !felt.type, !felt.type
-      %felt_const_0_104 = felt.const  0
-      %183 = felt.sub %felt_const_0_87, %felt_const_0_104 : !felt.type, !felt.type
-      %184 = felt.mul %arg14, %183 : !felt.type, !felt.type
-      %felt_const_0_105 = felt.const  0
-      constrain.eq %184, %felt_const_0_105 : !felt.type, !felt.type
-      %felt_const_3_106 = felt.const  3
-      %185 = felt.add %166, %felt_const_3_106 : !felt.type, !felt.type
-      %felt_const_1_107 = felt.const  1
-      %186 = felt.sub %0, %felt_const_1_107 : !felt.type, !felt.type
-      %187 = felt.mul %0, %186 : !felt.type, !felt.type
-      %felt_const_0_108 = felt.const  0
-      constrain.eq %187, %felt_const_0_108 : !felt.type, !felt.type
-      %188 = felt.sub %185, %arg19 : !felt.type, !felt.type
-      %felt_const_1_109 = felt.const  1
-      %189 = felt.sub %188, %felt_const_1_109 : !felt.type, !felt.type
-      %190 = felt.sub %189, %168 : !felt.type, !felt.type
+    function.def @constrain(%arg0: !struct.type<@SLTU<[]>>, %arg1: !felt.type, %arg2: !felt.type, %arg3: !felt.type, %arg4: !felt.type, %arg5: !felt.type, %arg6: !felt.type, %arg7: !felt.type, %arg8: !felt.type, %arg9: !felt.type, %arg10: !felt.type, %arg11: !felt.type, %arg12: !felt.type, %arg13: !felt.type, %arg14: !felt.type, %arg15: !felt.type, %arg16: !felt.type, %arg17: !felt.type, %arg18: !felt.type, %arg19: !felt.type, %arg20: !felt.type, %arg21: !felt.type, %arg22: !felt.type, %arg23: !felt.type, %arg24: !felt.type, %arg25: !felt.type, %arg26: !felt.type, %arg27: !felt.type, %arg28: !felt.type, %arg29: !felt.type, %arg30: !felt.type, %arg31: !felt.type) attributes {function.allow_constraint} {
       %felt_const_2130673921 = felt.const  2130673921
-      %191 = felt.mul %190, %felt_const_2130673921 : !felt.type, !felt.type
-      %192 = felt.mul %0, %168 : !felt.type, !felt.type
-      %felt_const_65536_110 = felt.const  65536
-      %193 = bool.cmp lt(%192, %felt_const_65536_110)
+      %felt_const_3 = felt.const  3
+      %felt_const_256 = felt.const  256
+      %felt_const_8192 = felt.const  8192
+      %felt_const_1864368129 = felt.const  1864368129
+      %felt_const_65537 = felt.const  65537
+      %felt_const_4 = felt.const  4
+      %felt_const_2130706432 = felt.const  2130706432
+      %felt_const_65536 = felt.const  65536
+      %felt_const_2 = felt.const  2
+      %felt_const_1 = felt.const  1
+      %felt_const_0 = felt.const  0
+      %0 = struct.readf %arg0[@lt_operation_35] : <@SLTU<[]>>, !felt.type
+      %1 = struct.readf %arg0[@lt_operation_36] : <@SLTU<[]>>, !felt.type
+      %2 = struct.readf %arg0[@lt_operation_37] : <@SLTU<[]>>, !felt.type
+      %3 = struct.readf %arg0[@lt_operation_38] : <@SLTU<[]>>, !felt.type
+      %4 = struct.readf %arg0[@lt_operation_39] : <@SLTU<[]>>, !felt.type
+      %5 = struct.readf %arg0[@lt_operation_40] : <@SLTU<[]>>, !felt.type
+      %6 = struct.readf %arg0[@lt_operation_41] : <@SLTU<[]>>, !felt.type
+      %7 = struct.readf %arg0[@lt_operation_42] : <@SLTU<[]>>, !felt.type
+      %8 = struct.readf %arg0[@lt_operation_43] : <@SLTU<[]>>, !felt.type
+      %9 = struct.readf %arg0[@lt_operation_44] : <@SLTU<[]>>, !felt.type
+      %10 = felt.sub %8, %felt_const_1 : !felt.type, !felt.type
+      %11 = felt.mul %8, %10 : !felt.type, !felt.type
+      constrain.eq %11, %felt_const_0 : !felt.type, !felt.type
+      %12 = felt.mul %arg26, %felt_const_2 : !felt.type, !felt.type
+      %13 = felt.mul %8, %felt_const_65536 : !felt.type, !felt.type
+      %14 = felt.sub %12, %13 : !felt.type, !felt.type
+      %15 = felt.mul %14, %felt_const_0 : !felt.type, !felt.type
+      %16 = bool.cmp lt(%15, %felt_const_65536)
+      %17 = cast.tofelt %16 : i1
+      constrain.eq %17, %felt_const_1 : !felt.type, !felt.type
+      %18 = felt.sub %9, %felt_const_1 : !felt.type, !felt.type
+      %19 = felt.mul %9, %18 : !felt.type, !felt.type
+      constrain.eq %19, %felt_const_0 : !felt.type, !felt.type
+      %20 = felt.mul %arg31, %felt_const_2 : !felt.type, !felt.type
+      %21 = felt.mul %9, %felt_const_65536 : !felt.type, !felt.type
+      %22 = felt.sub %20, %21 : !felt.type, !felt.type
+      %23 = felt.mul %22, %felt_const_0 : !felt.type, !felt.type
+      %24 = bool.cmp lt(%23, %felt_const_65536)
+      %25 = cast.tofelt %24 : i1
+      constrain.eq %25, %felt_const_1 : !felt.type, !felt.type
+      %26 = felt.mul %8, %felt_const_2130706432 : !felt.type, !felt.type
+      constrain.eq %26, %felt_const_0 : !felt.type, !felt.type
+      %27 = felt.mul %9, %felt_const_2130706432 : !felt.type, !felt.type
+      constrain.eq %27, %felt_const_0 : !felt.type, !felt.type
+      %28 = felt.add %arg26, %felt_const_0 : !felt.type, !felt.type
+      %29 = felt.sub %28, %13 : !felt.type, !felt.type
+      %30 = felt.add %arg31, %felt_const_0 : !felt.type, !felt.type
+      %31 = felt.sub %30, %21 : !felt.type, !felt.type
+      %32 = felt.add %1, %2 : !felt.type, !felt.type
+      %33 = felt.add %32, %3 : !felt.type, !felt.type
+      %34 = felt.add %33, %4 : !felt.type, !felt.type
+      %35 = felt.sub %1, %felt_const_1 : !felt.type, !felt.type
+      %36 = felt.mul %1, %35 : !felt.type, !felt.type
+      constrain.eq %36, %felt_const_0 : !felt.type, !felt.type
+      %37 = felt.sub %2, %felt_const_1 : !felt.type, !felt.type
+      %38 = felt.mul %2, %37 : !felt.type, !felt.type
+      constrain.eq %38, %felt_const_0 : !felt.type, !felt.type
+      %39 = felt.sub %3, %felt_const_1 : !felt.type, !felt.type
+      %40 = felt.mul %3, %39 : !felt.type, !felt.type
+      constrain.eq %40, %felt_const_0 : !felt.type, !felt.type
+      %41 = felt.sub %4, %felt_const_1 : !felt.type, !felt.type
+      %42 = felt.mul %4, %41 : !felt.type, !felt.type
+      constrain.eq %42, %felt_const_0 : !felt.type, !felt.type
+      %43 = felt.sub %34, %felt_const_1 : !felt.type, !felt.type
+      %44 = felt.mul %34, %43 : !felt.type, !felt.type
+      constrain.eq %44, %felt_const_0 : !felt.type, !felt.type
+      %45 = felt.sub %felt_const_1, %34 : !felt.type, !felt.type
+      %46 = felt.add %4, %felt_const_0 : !felt.type, !felt.type
+      %47 = felt.sub %felt_const_1, %46 : !felt.type, !felt.type
+      %48 = felt.sub %29, %31 : !felt.type, !felt.type
+      %49 = felt.mul %47, %48 : !felt.type, !felt.type
+      constrain.eq %49, %felt_const_0 : !felt.type, !felt.type
+      %50 = felt.mul %29, %4 : !felt.type, !felt.type
+      %51 = felt.add %50, %felt_const_0 : !felt.type, !felt.type
+      %52 = felt.mul %31, %4 : !felt.type, !felt.type
+      %53 = felt.add %52, %felt_const_0 : !felt.type, !felt.type
+      %54 = felt.add %46, %3 : !felt.type, !felt.type
+      %55 = felt.sub %felt_const_1, %54 : !felt.type, !felt.type
+      %56 = felt.sub %arg25, %arg30 : !felt.type, !felt.type
+      %57 = felt.mul %55, %56 : !felt.type, !felt.type
+      constrain.eq %57, %felt_const_0 : !felt.type, !felt.type
+      %58 = felt.mul %arg25, %3 : !felt.type, !felt.type
+      %59 = felt.add %51, %58 : !felt.type, !felt.type
+      %60 = felt.mul %arg30, %3 : !felt.type, !felt.type
+      %61 = felt.add %53, %60 : !felt.type, !felt.type
+      %62 = felt.add %54, %2 : !felt.type, !felt.type
+      %63 = felt.sub %felt_const_1, %62 : !felt.type, !felt.type
+      %64 = felt.sub %arg24, %arg29 : !felt.type, !felt.type
+      %65 = felt.mul %63, %64 : !felt.type, !felt.type
+      constrain.eq %65, %felt_const_0 : !felt.type, !felt.type
+      %66 = felt.mul %arg24, %2 : !felt.type, !felt.type
+      %67 = felt.add %59, %66 : !felt.type, !felt.type
+      %68 = felt.mul %arg29, %2 : !felt.type, !felt.type
+      %69 = felt.add %61, %68 : !felt.type, !felt.type
+      %70 = felt.add %62, %1 : !felt.type, !felt.type
+      %71 = felt.sub %felt_const_1, %70 : !felt.type, !felt.type
+      %72 = felt.sub %arg23, %arg28 : !felt.type, !felt.type
+      %73 = felt.mul %71, %72 : !felt.type, !felt.type
+      constrain.eq %73, %felt_const_0 : !felt.type, !felt.type
+      %74 = felt.mul %arg23, %1 : !felt.type, !felt.type
+      %75 = felt.add %67, %74 : !felt.type, !felt.type
+      %76 = felt.mul %arg28, %1 : !felt.type, !felt.type
+      %77 = felt.add %69, %76 : !felt.type, !felt.type
+      %78 = felt.sub %75, %6 : !felt.type, !felt.type
+      constrain.eq %78, %felt_const_0 : !felt.type, !felt.type
+      %79 = felt.sub %77, %7 : !felt.type, !felt.type
+      constrain.eq %79, %felt_const_0 : !felt.type, !felt.type
+      %80 = felt.sub %45, %felt_const_1 : !felt.type, !felt.type
+      %81 = felt.sub %6, %7 : !felt.type, !felt.type
+      %82 = felt.mul %5, %81 : !felt.type, !felt.type
+      %83 = felt.sub %82, %felt_const_1 : !felt.type, !felt.type
+      %84 = felt.mul %80, %83 : !felt.type, !felt.type
+      constrain.eq %84, %felt_const_0 : !felt.type, !felt.type
+      %85 = felt.sub %0, %felt_const_1 : !felt.type, !felt.type
+      %86 = felt.mul %0, %85 : !felt.type, !felt.type
+      constrain.eq %86, %felt_const_0 : !felt.type, !felt.type
+      %87 = felt.mul %0, %felt_const_65536 : !felt.type, !felt.type
+      %88 = felt.add %81, %87 : !felt.type, !felt.type
+      %89 = felt.mul %88, %felt_const_1 : !felt.type, !felt.type
+      %90 = bool.cmp lt(%89, %felt_const_65536)
+      %91 = cast.tofelt %90 : i1
+      constrain.eq %91, %felt_const_1 : !felt.type, !felt.type
+      %92 = felt.add %arg3, %felt_const_4 : !felt.type, !felt.type
+      %93 = struct.readf %arg0[@state_1] : <@SLTU<[]>>, !felt.type
+      %94 = struct.readf %arg0[@state_2] : <@SLTU<[]>>, !felt.type
+      %95 = felt.mul %93, %felt_const_65536 : !felt.type, !felt.type
+      %96 = felt.add %94, %95 : !felt.type, !felt.type
+      %97 = bool.cmp lt(%arg4, %felt_const_65537)
+      %98 = cast.tofelt %97 : i1
+      constrain.eq %98, %felt_const_1 : !felt.type, !felt.type
+      %99 = bool.cmp lt(%arg5, %felt_const_65536)
+      %100 = cast.tofelt %99 : i1
+      constrain.eq %100, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %arg2, %96 : !felt.type, !felt.type
+      %101 = struct.readf %arg0[@fresh_output_2] : <@SLTU<[]>>, !felt.type
+      constrain.eq %101, %92 : !felt.type, !felt.type
+      %102 = felt.sub %94, %felt_const_1 : !felt.type, !felt.type
+      %103 = felt.mul %102, %felt_const_1864368129 : !felt.type, !felt.type
+      %104 = felt.mul %103, %felt_const_1 : !felt.type, !felt.type
+      %105 = bool.cmp lt(%104, %felt_const_8192)
+      %106 = cast.tofelt %105 : i1
+      constrain.eq %106, %felt_const_1 : !felt.type, !felt.type
+      %107 = felt.mul %93, %felt_const_1 : !felt.type, !felt.type
+      %108 = bool.cmp lt(%107, %felt_const_256)
+      %109 = cast.tofelt %108 : i1
+      constrain.eq %109, %felt_const_1 : !felt.type, !felt.type
+      %110 = felt.mul %felt_const_1, %felt_const_0 : !felt.type, !felt.type
+      %111 = bool.cmp lt(%110, %felt_const_256)
+      %112 = cast.tofelt %111 : i1
+      constrain.eq %112, %felt_const_1 : !felt.type, !felt.type
+      %113 = felt.add %0, %felt_const_0 : !felt.type, !felt.type
+      %114 = struct.readf %arg0[@adapter_12] : <@SLTU<[]>>, !felt.type
+      %115 = struct.readf %arg0[@adapter_20] : <@SLTU<[]>>, !felt.type
+      %116 = struct.readf %arg0[@adapter_30] : <@SLTU<[]>>, !felt.type
+      %117 = struct.readf %arg0[@adapter_32] : <@SLTU<[]>>, !felt.type
+      %118 = felt.sub %felt_const_1, %117 : !felt.type, !felt.type
+      %119 = felt.sub %118, %felt_const_1 : !felt.type, !felt.type
+      %120 = felt.mul %118, %119 : !felt.type, !felt.type
+      constrain.eq %120, %felt_const_0 : !felt.type, !felt.type
+      %121 = felt.sub %117, %felt_const_1 : !felt.type, !felt.type
+      %122 = felt.mul %117, %121 : !felt.type, !felt.type
+      constrain.eq %122, %felt_const_0 : !felt.type, !felt.type
+      %123 = felt.add %118, %117 : !felt.type, !felt.type
+      %124 = felt.sub %123, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %124, %felt_const_0 : !felt.type, !felt.type
+      %125 = struct.readf %arg0[@fresh_151] : <@SLTU<[]>>, !felt.type
+      %126 = felt.sub %125, %felt_const_1 : !felt.type, !felt.type
+      %127 = felt.mul %118, %126 : !felt.type, !felt.type
+      constrain.eq %127, %felt_const_0 : !felt.type, !felt.type
+      %128 = felt.sub %arg15, %felt_const_0 : !felt.type, !felt.type
+      %129 = felt.mul %128, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %129, %felt_const_0 : !felt.type, !felt.type
+      %130 = felt.add %arg22, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %arg8, %130 : !felt.type, !felt.type
+      %131 = felt.sub %113, %felt_const_0 : !felt.type, !felt.type
+      %132 = felt.mul %arg14, %131 : !felt.type, !felt.type
+      constrain.eq %132, %felt_const_0 : !felt.type, !felt.type
+      %133 = felt.mul %arg14, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %133, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %133, %felt_const_0 : !felt.type, !felt.type
+      constrain.eq %133, %felt_const_0 : !felt.type, !felt.type
+      %134 = felt.add %96, %felt_const_4 : !felt.type, !felt.type
+      %135 = felt.sub %134, %arg16 : !felt.type, !felt.type
+      %136 = felt.sub %135, %felt_const_1 : !felt.type, !felt.type
+      %137 = felt.sub %136, %114 : !felt.type, !felt.type
+      %138 = felt.mul %137, %felt_const_2130673921 : !felt.type, !felt.type
+      %139 = felt.mul %114, %felt_const_1 : !felt.type, !felt.type
+      %140 = bool.cmp lt(%139, %felt_const_65536)
+      %141 = cast.tofelt %140 : i1
+      constrain.eq %141, %felt_const_1 : !felt.type, !felt.type
+      %142 = felt.mul %138, %felt_const_1 : !felt.type, !felt.type
+      %143 = bool.cmp lt(%142, %felt_const_256)
+      %144 = cast.tofelt %143 : i1
+      constrain.eq %144, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %112, %felt_const_1 : !felt.type, !felt.type
+      %145 = bool.cmp lt(%arg17, %felt_const_65536)
+      %146 = cast.tofelt %145 : i1
+      constrain.eq %146, %felt_const_1 : !felt.type, !felt.type
+      %147 = bool.cmp lt(%arg18, %felt_const_65536)
+      %148 = cast.tofelt %147 : i1
+      constrain.eq %148, %felt_const_1 : !felt.type, !felt.type
+      %149 = bool.cmp lt(%arg19, %felt_const_65536)
+      %150 = cast.tofelt %149 : i1
+      constrain.eq %150, %felt_const_1 : !felt.type, !felt.type
+      %151 = bool.cmp lt(%arg20, %felt_const_65536)
+      %152 = cast.tofelt %151 : i1
+      constrain.eq %152, %felt_const_1 : !felt.type, !felt.type
+      %153 = struct.readf %arg0[@fresh_output_10] : <@SLTU<[]>>, !felt.type
+      constrain.eq %153, %113 : !felt.type, !felt.type
+      %154 = felt.add %96, %felt_const_3 : !felt.type, !felt.type
+      %155 = felt.sub %154, %arg21 : !felt.type, !felt.type
+      %156 = felt.sub %155, %felt_const_1 : !felt.type, !felt.type
+      %157 = felt.sub %156, %115 : !felt.type, !felt.type
+      %158 = felt.mul %157, %felt_const_2130673921 : !felt.type, !felt.type
+      %159 = felt.mul %115, %felt_const_1 : !felt.type, !felt.type
+      %160 = bool.cmp lt(%159, %felt_const_65536)
+      %161 = cast.tofelt %160 : i1
+      constrain.eq %161, %felt_const_1 : !felt.type, !felt.type
+      %162 = felt.mul %158, %felt_const_1 : !felt.type, !felt.type
+      %163 = bool.cmp lt(%162, %felt_const_256)
+      %164 = cast.tofelt %163 : i1
+      constrain.eq %164, %felt_const_1 : !felt.type, !felt.type
+      constrain.eq %112, %felt_const_1 : !felt.type, !felt.type
+      %165 = bool.cmp lt(%arg23, %felt_const_65536)
+      %166 = cast.tofelt %165 : i1
+      constrain.eq %166, %felt_const_1 : !felt.type, !felt.type
+      %167 = bool.cmp lt(%arg24, %felt_const_65536)
+      %168 = cast.tofelt %167 : i1
+      constrain.eq %168, %felt_const_1 : !felt.type, !felt.type
+      %169 = bool.cmp lt(%arg25, %felt_const_65536)
+      %170 = cast.tofelt %169 : i1
+      constrain.eq %170, %felt_const_1 : !felt.type, !felt.type
+      %171 = bool.cmp lt(%arg26, %felt_const_65536)
+      %172 = cast.tofelt %171 : i1
+      constrain.eq %172, %felt_const_1 : !felt.type, !felt.type
+      %173 = struct.readf %arg0[@fresh_output_15] : <@SLTU<[]>>, !felt.type
+      constrain.eq %173, %154 : !felt.type, !felt.type
+      %174 = felt.add %96, %felt_const_2 : !felt.type, !felt.type
+      %175 = felt.sub %felt_const_1, %arg15 : !felt.type, !felt.type
+      %176 = felt.sub %175, %felt_const_1 : !felt.type, !felt.type
+      %177 = felt.mul %175, %176 : !felt.type, !felt.type
+      constrain.eq %177, %felt_const_0 : !felt.type, !felt.type
+      %178 = felt.sub %174, %arg27 : !felt.type, !felt.type
+      %179 = felt.sub %178, %felt_const_1 : !felt.type, !felt.type
+      %180 = felt.sub %179, %116 : !felt.type, !felt.type
+      %181 = felt.mul %180, %felt_const_2130673921 : !felt.type, !felt.type
+      %182 = felt.mul %175, %116 : !felt.type, !felt.type
+      %183 = bool.cmp lt(%182, %felt_const_65536)
+      %184 = cast.tofelt %183 : i1
+      constrain.eq %184, %felt_const_1 : !felt.type, !felt.type
+      %185 = felt.mul %175, %181 : !felt.type, !felt.type
+      %186 = bool.cmp lt(%185, %felt_const_256)
+      %187 = cast.tofelt %186 : i1
+      constrain.eq %187, %felt_const_1 : !felt.type, !felt.type
+      %188 = felt.mul %175, %felt_const_0 : !felt.type, !felt.type
+      %189 = bool.cmp lt(%188, %felt_const_256)
+      %190 = cast.tofelt %189 : i1
+      constrain.eq %190, %felt_const_1 : !felt.type, !felt.type
+      %191 = bool.cmp lt(%arg28, %felt_const_65536)
+      %192 = cast.tofelt %191 : i1
+      constrain.eq %192, %felt_const_1 : !felt.type, !felt.type
+      %193 = bool.cmp lt(%arg29, %felt_const_65536)
       %194 = cast.tofelt %193 : i1
-      %felt_const_1_111 = felt.const  1
-      constrain.eq %194, %felt_const_1_111 : !felt.type, !felt.type
-      %195 = felt.mul %0, %191 : !felt.type, !felt.type
-      %felt_const_256_112 = felt.const  256
-      %196 = bool.cmp lt(%195, %felt_const_256_112)
-      %197 = cast.tofelt %196 : i1
-      %felt_const_1_113 = felt.const  1
-      constrain.eq %197, %felt_const_1_113 : !felt.type, !felt.type
-      %felt_const_0_114 = felt.const  0
-      %198 = felt.mul %0, %felt_const_0_114 : !felt.type, !felt.type
-      %felt_const_256_115 = felt.const  256
-      %199 = bool.cmp lt(%198, %felt_const_256_115)
-      %200 = cast.tofelt %199 : i1
-      %felt_const_1_116 = felt.const  1
-      constrain.eq %200, %felt_const_1_116 : !felt.type, !felt.type
-      %felt_const_0_117 = felt.const  0
-      %felt_const_0_118 = felt.const  0
-      %felt_const_65536_119 = felt.const  65536
-      %201 = bool.cmp lt(%arg20, %felt_const_65536_119)
-      %202 = cast.tofelt %201 : i1
-      %felt_const_1_120 = felt.const  1
-      constrain.eq %202, %felt_const_1_120 : !felt.type, !felt.type
-      %felt_const_65536_121 = felt.const  65536
-      %203 = bool.cmp lt(%arg21, %felt_const_65536_121)
-      %204 = cast.tofelt %203 : i1
-      %felt_const_1_122 = felt.const  1
-      constrain.eq %204, %felt_const_1_122 : !felt.type, !felt.type
-      %felt_const_65536_123 = felt.const  65536
-      %205 = bool.cmp lt(%arg22, %felt_const_65536_123)
-      %206 = cast.tofelt %205 : i1
-      %felt_const_1_124 = felt.const  1
-      constrain.eq %206, %felt_const_1_124 : !felt.type, !felt.type
-      %felt_const_65536_125 = felt.const  65536
-      %207 = bool.cmp lt(%arg23, %felt_const_65536_125)
-      %208 = cast.tofelt %207 : i1
-      %felt_const_1_126 = felt.const  1
-      constrain.eq %208, %felt_const_1_126 : !felt.type, !felt.type
-      %felt_const_0_127 = felt.const  0
-      %felt_const_0_128 = felt.const  0
-      %209 = struct.readf %arg0[@fresh_output_10] : <@SLTU<[]>>, !felt.type
-      constrain.eq %209, %167 : !felt.type, !felt.type
-      %felt_const_2_129 = felt.const  2
-      %210 = felt.add %166, %felt_const_2_129 : !felt.type, !felt.type
-      %felt_const_1_130 = felt.const  1
-      %211 = felt.sub %0, %felt_const_1_130 : !felt.type, !felt.type
-      %212 = felt.mul %0, %211 : !felt.type, !felt.type
-      %felt_const_0_131 = felt.const  0
-      constrain.eq %212, %felt_const_0_131 : !felt.type, !felt.type
-      %213 = felt.sub %210, %arg24 : !felt.type, !felt.type
-      %felt_const_1_132 = felt.const  1
-      %214 = felt.sub %213, %felt_const_1_132 : !felt.type, !felt.type
-      %215 = felt.sub %214, %169 : !felt.type, !felt.type
-      %felt_const_2130673921_133 = felt.const  2130673921
-      %216 = felt.mul %215, %felt_const_2130673921_133 : !felt.type, !felt.type
-      %217 = felt.mul %0, %169 : !felt.type, !felt.type
-      %felt_const_65536_134 = felt.const  65536
-      %218 = bool.cmp lt(%217, %felt_const_65536_134)
-      %219 = cast.tofelt %218 : i1
-      %felt_const_1_135 = felt.const  1
-      constrain.eq %219, %felt_const_1_135 : !felt.type, !felt.type
-      %220 = felt.mul %0, %216 : !felt.type, !felt.type
-      %felt_const_256_136 = felt.const  256
-      %221 = bool.cmp lt(%220, %felt_const_256_136)
-      %222 = cast.tofelt %221 : i1
-      %felt_const_1_137 = felt.const  1
-      constrain.eq %222, %felt_const_1_137 : !felt.type, !felt.type
-      %felt_const_0_138 = felt.const  0
-      %223 = felt.mul %0, %felt_const_0_138 : !felt.type, !felt.type
-      %felt_const_256_139 = felt.const  256
-      %224 = bool.cmp lt(%223, %felt_const_256_139)
-      %225 = cast.tofelt %224 : i1
-      %felt_const_1_140 = felt.const  1
-      constrain.eq %225, %felt_const_1_140 : !felt.type, !felt.type
-      %felt_const_0_141 = felt.const  0
-      %felt_const_0_142 = felt.const  0
-      %felt_const_65536_143 = felt.const  65536
-      %226 = bool.cmp lt(%arg26, %felt_const_65536_143)
-      %227 = cast.tofelt %226 : i1
-      %felt_const_1_144 = felt.const  1
-      constrain.eq %227, %felt_const_1_144 : !felt.type, !felt.type
-      %felt_const_65536_145 = felt.const  65536
-      %228 = bool.cmp lt(%arg27, %felt_const_65536_145)
-      %229 = cast.tofelt %228 : i1
-      %felt_const_1_146 = felt.const  1
-      constrain.eq %229, %felt_const_1_146 : !felt.type, !felt.type
-      %felt_const_65536_147 = felt.const  65536
-      %230 = bool.cmp lt(%arg28, %felt_const_65536_147)
-      %231 = cast.tofelt %230 : i1
-      %felt_const_1_148 = felt.const  1
-      constrain.eq %231, %felt_const_1_148 : !felt.type, !felt.type
-      %felt_const_65536_149 = felt.const  65536
-      %232 = bool.cmp lt(%arg29, %felt_const_65536_149)
-      %233 = cast.tofelt %232 : i1
-      %felt_const_1_150 = felt.const  1
-      constrain.eq %233, %felt_const_1_150 : !felt.type, !felt.type
-      %felt_const_0_151 = felt.const  0
-      %felt_const_0_152 = felt.const  0
-      %234 = struct.readf %arg0[@fresh_output_15] : <@SLTU<[]>>, !felt.type
-      constrain.eq %234, %210 : !felt.type, !felt.type
-      %felt_const_1_153 = felt.const  1
-      %235 = felt.add %166, %felt_const_1_153 : !felt.type, !felt.type
-      %236 = felt.sub %0, %arg15 : !felt.type, !felt.type
-      %felt_const_1_154 = felt.const  1
-      %237 = felt.sub %236, %felt_const_1_154 : !felt.type, !felt.type
-      %238 = felt.mul %236, %237 : !felt.type, !felt.type
-      %felt_const_0_155 = felt.const  0
-      constrain.eq %238, %felt_const_0_155 : !felt.type, !felt.type
-      %239 = felt.sub %235, %arg30 : !felt.type, !felt.type
-      %felt_const_1_156 = felt.const  1
-      %240 = felt.sub %239, %felt_const_1_156 : !felt.type, !felt.type
-      %241 = felt.sub %240, %170 : !felt.type, !felt.type
-      %felt_const_2130673921_157 = felt.const  2130673921
-      %242 = felt.mul %241, %felt_const_2130673921_157 : !felt.type, !felt.type
-      %243 = felt.mul %236, %170 : !felt.type, !felt.type
-      %felt_const_65536_158 = felt.const  65536
-      %244 = bool.cmp lt(%243, %felt_const_65536_158)
-      %245 = cast.tofelt %244 : i1
-      %felt_const_1_159 = felt.const  1
-      constrain.eq %245, %felt_const_1_159 : !felt.type, !felt.type
-      %246 = felt.mul %236, %242 : !felt.type, !felt.type
-      %felt_const_256_160 = felt.const  256
-      %247 = bool.cmp lt(%246, %felt_const_256_160)
-      %248 = cast.tofelt %247 : i1
-      %felt_const_1_161 = felt.const  1
-      constrain.eq %248, %felt_const_1_161 : !felt.type, !felt.type
-      %felt_const_0_162 = felt.const  0
-      %249 = felt.mul %236, %felt_const_0_162 : !felt.type, !felt.type
-      %felt_const_256_163 = felt.const  256
-      %250 = bool.cmp lt(%249, %felt_const_256_163)
-      %251 = cast.tofelt %250 : i1
-      %felt_const_1_164 = felt.const  1
-      constrain.eq %251, %felt_const_1_164 : !felt.type, !felt.type
-      %felt_const_0_165 = felt.const  0
-      %felt_const_0_166 = felt.const  0
-      %felt_const_65536_167 = felt.const  65536
-      %252 = bool.cmp lt(%arg31, %felt_const_65536_167)
-      %253 = cast.tofelt %252 : i1
-      %felt_const_1_168 = felt.const  1
-      constrain.eq %253, %felt_const_1_168 : !felt.type, !felt.type
-      %felt_const_65536_169 = felt.const  65536
-      %254 = bool.cmp lt(%arg32, %felt_const_65536_169)
-      %255 = cast.tofelt %254 : i1
-      %felt_const_1_170 = felt.const  1
-      constrain.eq %255, %felt_const_1_170 : !felt.type, !felt.type
-      %felt_const_65536_171 = felt.const  65536
-      %256 = bool.cmp lt(%arg33, %felt_const_65536_171)
-      %257 = cast.tofelt %256 : i1
-      %felt_const_1_172 = felt.const  1
-      constrain.eq %257, %felt_const_1_172 : !felt.type, !felt.type
-      %felt_const_65536_173 = felt.const  65536
-      %258 = bool.cmp lt(%arg34, %felt_const_65536_173)
-      %259 = cast.tofelt %258 : i1
-      %felt_const_1_174 = felt.const  1
-      constrain.eq %259, %felt_const_1_174 : !felt.type, !felt.type
-      %felt_const_0_175 = felt.const  0
-      %felt_const_0_176 = felt.const  0
-      %260 = struct.readf %arg0[@fresh_output_24] : <@SLTU<[]>>, !felt.type
-      constrain.eq %260, %235 : !felt.type, !felt.type
-      %261 = felt.sub %arg31, %arg10 : !felt.type, !felt.type
-      %262 = felt.mul %arg15, %261 : !felt.type, !felt.type
-      %felt_const_0_177 = felt.const  0
-      constrain.eq %262, %felt_const_0_177 : !felt.type, !felt.type
-      %263 = felt.sub %arg32, %arg11 : !felt.type, !felt.type
-      %264 = felt.mul %arg15, %263 : !felt.type, !felt.type
-      %felt_const_0_178 = felt.const  0
-      constrain.eq %264, %felt_const_0_178 : !felt.type, !felt.type
-      %265 = felt.sub %arg33, %arg12 : !felt.type, !felt.type
-      %266 = felt.mul %arg15, %265 : !felt.type, !felt.type
-      %felt_const_0_179 = felt.const  0
-      constrain.eq %266, %felt_const_0_179 : !felt.type, !felt.type
-      %267 = felt.sub %arg34, %arg13 : !felt.type, !felt.type
-      %268 = felt.mul %arg15, %267 : !felt.type, !felt.type
-      %felt_const_0_180 = felt.const  0
-      constrain.eq %268, %felt_const_0_180 : !felt.type, !felt.type
+      constrain.eq %194, %felt_const_1 : !felt.type, !felt.type
+      %195 = bool.cmp lt(%arg30, %felt_const_65536)
+      %196 = cast.tofelt %195 : i1
+      constrain.eq %196, %felt_const_1 : !felt.type, !felt.type
+      %197 = bool.cmp lt(%arg31, %felt_const_65536)
+      %198 = cast.tofelt %197 : i1
+      constrain.eq %198, %felt_const_1 : !felt.type, !felt.type
+      %199 = struct.readf %arg0[@fresh_output_24] : <@SLTU<[]>>, !felt.type
+      constrain.eq %199, %174 : !felt.type, !felt.type
+      %200 = felt.sub %arg28, %arg10 : !felt.type, !felt.type
+      %201 = felt.mul %arg15, %200 : !felt.type, !felt.type
+      constrain.eq %201, %felt_const_0 : !felt.type, !felt.type
+      %202 = felt.sub %arg29, %arg11 : !felt.type, !felt.type
+      %203 = felt.mul %arg15, %202 : !felt.type, !felt.type
+      constrain.eq %203, %felt_const_0 : !felt.type, !felt.type
+      %204 = felt.sub %arg30, %arg12 : !felt.type, !felt.type
+      %205 = felt.mul %arg15, %204 : !felt.type, !felt.type
+      constrain.eq %205, %felt_const_0 : !felt.type, !felt.type
+      %206 = felt.sub %arg31, %arg13 : !felt.type, !felt.type
+      %207 = felt.mul %arg15, %206 : !felt.type, !felt.type
+      constrain.eq %207, %felt_const_0 : !felt.type, !felt.type
       function.return
     }
+    struct.field @fresh_151 : !felt.type
   }
 }

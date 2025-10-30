@@ -1,28 +1,14 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @DIV<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -2798,29 +2784,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @DIVU<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -5596,29 +5568,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @REM<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -8394,29 +8352,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @REMU<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -11192,29 +11136,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @DIVW<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -13990,29 +13920,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @REMW<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -16788,29 +16704,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @DIVUW<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -19586,29 +19488,15 @@ module attributes {veridise.lang = "llzk"} {
     struct.field @low_bits_3 : !felt.type
   }
   struct.def @REMUW<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @a_29 : !felt.type {llzk.pub}
     struct.field @a_30 : !felt.type {llzk.pub}
     struct.field @a_31 : !felt.type {llzk.pub}
     struct.field @a_32 : !felt.type {llzk.pub}
     struct.field @fresh_output_15 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @fresh_output_24 : !felt.type {llzk.pub}
-    struct.field @adapter_21 : !felt.type {llzk.pub}
-    struct.field @adapter_22 : !felt.type {llzk.pub}
-    struct.field @adapter_23 : !felt.type {llzk.pub}
-    struct.field @adapter_24 : !felt.type {llzk.pub}
-    struct.field @adapter_25 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type

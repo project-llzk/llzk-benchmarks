@@ -1,30 +1,14 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @StoreWord<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
-    struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @fresh_output_3 : !felt.type {llzk.pub}
-    struct.field @fresh_output_4 : !felt.type {llzk.pub}
     struct.field @store_value_40 : !felt.type {llzk.pub}
     struct.field @store_value_41 : !felt.type {llzk.pub}
     struct.field @store_value_42 : !felt.type {llzk.pub}
     struct.field @store_value_43 : !felt.type {llzk.pub}
     struct.field @fresh_output_10 : !felt.type {llzk.pub}
     struct.field @fresh_output_17 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_21 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
-    struct.field @adapter_7 : !felt.type {llzk.pub}
-    struct.field @adapter_8 : !felt.type {llzk.pub}
-    struct.field @adapter_9 : !felt.type {llzk.pub}
-    struct.field @adapter_10 : !felt.type {llzk.pub}
     struct.field @fresh_output_30 : !felt.type {llzk.pub}
-    struct.field @adapter_14 : !felt.type {llzk.pub}
-    struct.field @adapter_15 : !felt.type {llzk.pub}
-    struct.field @adapter_16 : !felt.type {llzk.pub}
-    struct.field @adapter_17 : !felt.type {llzk.pub}
-    struct.field @adapter_18 : !felt.type {llzk.pub}
     struct.field @state_1 : !felt.type
     struct.field @state_2 : !felt.type
     struct.field @adapter_12 : !felt.type
@@ -186,8 +170,8 @@ module attributes {veridise.lang = "llzk"} {
       %103 = struct.readf %arg0[@store_value_41] : <@StoreWord<[]>>, !felt.type
       %104 = struct.readf %arg0[@store_value_42] : <@StoreWord<[]>>, !felt.type
       %105 = struct.readf %arg0[@store_value_43] : <@StoreWord<[]>>, !felt.type
-      %106 = struct.readf %arg0[@fresh_output_4] : <@StoreWord<[]>>, !felt.type
-      constrain.eq %106, %10 : !felt.type, !felt.type
+      %106 = struct.readf %arg0[@fresh_output_1] : <@StoreWord<[]>>, !felt.type
+      constrain.eq %106, %62 : !felt.type, !felt.type
       %107 = struct.readf %arg0[@fresh_151] : <@StoreWord<[]>>, !felt.type
       %108 = felt.mul %107, %4 : !felt.type, !felt.type
       %109 = struct.readf %arg0[@is_page_protect_active_45] : <@StoreWord<[]>>, !felt.type

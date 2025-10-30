@@ -2,58 +2,34 @@ module attributes {veridise.lang = "llzk"} {
   struct.def @Poseidon2<[]> {
     struct.field @clk_high_0 : !felt.type {llzk.pub}
     struct.field @clk_low_1 : !felt.type {llzk.pub}
-    struct.field @addrs_8 : !felt.type {llzk.pub}
-    struct.field @addrs_9 : !felt.type {llzk.pub}
-    struct.field @addrs_10 : !felt.type {llzk.pub}
     struct.field @hash_result_104 : !felt.type {llzk.pub}
     struct.field @hash_result_105 : !felt.type {llzk.pub}
     struct.field @hash_result_106 : !felt.type {llzk.pub}
     struct.field @hash_result_107 : !felt.type {llzk.pub}
-    struct.field @addrs_11 : !felt.type {llzk.pub}
-    struct.field @addrs_12 : !felt.type {llzk.pub}
-    struct.field @addrs_13 : !felt.type {llzk.pub}
     struct.field @hash_result_108 : !felt.type {llzk.pub}
     struct.field @hash_result_109 : !felt.type {llzk.pub}
     struct.field @hash_result_110 : !felt.type {llzk.pub}
     struct.field @hash_result_111 : !felt.type {llzk.pub}
-    struct.field @addrs_14 : !felt.type {llzk.pub}
-    struct.field @addrs_15 : !felt.type {llzk.pub}
-    struct.field @addrs_16 : !felt.type {llzk.pub}
     struct.field @hash_result_112 : !felt.type {llzk.pub}
     struct.field @hash_result_113 : !felt.type {llzk.pub}
     struct.field @hash_result_114 : !felt.type {llzk.pub}
     struct.field @hash_result_115 : !felt.type {llzk.pub}
-    struct.field @addrs_17 : !felt.type {llzk.pub}
-    struct.field @addrs_18 : !felt.type {llzk.pub}
-    struct.field @addrs_19 : !felt.type {llzk.pub}
     struct.field @hash_result_116 : !felt.type {llzk.pub}
     struct.field @hash_result_117 : !felt.type {llzk.pub}
     struct.field @hash_result_118 : !felt.type {llzk.pub}
     struct.field @hash_result_119 : !felt.type {llzk.pub}
-    struct.field @addrs_20 : !felt.type {llzk.pub}
-    struct.field @addrs_21 : !felt.type {llzk.pub}
-    struct.field @addrs_22 : !felt.type {llzk.pub}
     struct.field @hash_result_120 : !felt.type {llzk.pub}
     struct.field @hash_result_121 : !felt.type {llzk.pub}
     struct.field @hash_result_122 : !felt.type {llzk.pub}
     struct.field @hash_result_123 : !felt.type {llzk.pub}
-    struct.field @addrs_23 : !felt.type {llzk.pub}
-    struct.field @addrs_24 : !felt.type {llzk.pub}
-    struct.field @addrs_25 : !felt.type {llzk.pub}
     struct.field @hash_result_124 : !felt.type {llzk.pub}
     struct.field @hash_result_125 : !felt.type {llzk.pub}
     struct.field @hash_result_126 : !felt.type {llzk.pub}
     struct.field @hash_result_127 : !felt.type {llzk.pub}
-    struct.field @addrs_26 : !felt.type {llzk.pub}
-    struct.field @addrs_27 : !felt.type {llzk.pub}
-    struct.field @addrs_28 : !felt.type {llzk.pub}
     struct.field @hash_result_128 : !felt.type {llzk.pub}
     struct.field @hash_result_129 : !felt.type {llzk.pub}
     struct.field @hash_result_130 : !felt.type {llzk.pub}
     struct.field @hash_result_131 : !felt.type {llzk.pub}
-    struct.field @addrs_29 : !felt.type {llzk.pub}
-    struct.field @addrs_30 : !felt.type {llzk.pub}
-    struct.field @addrs_31 : !felt.type {llzk.pub}
     struct.field @hash_result_132 : !felt.type {llzk.pub}
     struct.field @hash_result_133 : !felt.type {llzk.pub}
     struct.field @hash_result_134 : !felt.type {llzk.pub}

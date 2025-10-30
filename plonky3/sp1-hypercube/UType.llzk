@@ -1,12 +1,8 @@
 module attributes {veridise.lang = "llzk"} {
   struct.def @UType<[]> {
-    struct.field @state_0 : !felt.type {llzk.pub}
     struct.field @fresh_output_1 : !felt.type {llzk.pub}
     struct.field @fresh_output_2 : !felt.type {llzk.pub}
-    struct.field @state_4 : !felt.type {llzk.pub}
-    struct.field @state_5 : !felt.type {llzk.pub}
     struct.field @fresh_output_6 : !felt.type {llzk.pub}
-    struct.field @adapter_6 : !felt.type {llzk.pub}
     struct.field @add_operation_26 : !felt.type {llzk.pub}
     struct.field @add_operation_27 : !felt.type {llzk.pub}
     struct.field @add_operation_28 : !felt.type {llzk.pub}
