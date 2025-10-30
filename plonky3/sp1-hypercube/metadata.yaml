@@ -50,40 +50,52 @@ circuits:
     url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/keccak256/controller.rs"
   LoadByte:
     llzk: LoadByte.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_byte.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_byte.rs"
   LoadDouble:
     llzk: LoadDouble.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_double.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_double.rs"
   LoadHalf:
     llzk: LoadHalf.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_half.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_half.rs"
   LoadWord:
     llzk: LoadWord.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_word.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_word.rs"
   LoadX0:
     llzk: LoadX0.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_x0.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/load/load_x0.rs"
   Lt:
     llzk: Lt.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/lt/mod.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/lt/mod.rs"
   Mul:
     llzk: Mul.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/mul/mod.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/mul/mod.rs"
   Poseidon2:
     llzk: Poseidon2.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/poseidon2.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/poseidon2.rs"
+  ShaCompress:
+    llzk: ShaCompress.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/sha256/compress/air.rs"
+  ShaCompressControl:
+    llzk: ShaCompressControl.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/sha256/compress/controller.rs"
+  ShaExtend:
+    llzk: ShaExtend.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/sha256/extend/air.rs"
+  ShaExtendControl:
+    llzk: ShaExtendControl.llzk
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/syscall/precompiles/sha256/extend/controller.rs"
   StoreByte:
     llzk: StoreByte.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_byte.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_byte.rs"
   StoreDouble:
     llzk: StoreDouble.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_double.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_double.rs"
   StoreHalf:
     llzk: StoreHalf.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_half.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_half.rs"
   StoreWord:
     llzk: StoreWord.llzk
-    sp1_url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_word.rs"
+    url: "https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/memory/instructions/store/store_word.rs"
   Sub:
     llzk: Sub.llzk
     url: https://github.com/code-423n4/2025-09-succinct/blob/main/crates/core/machine/src/alu/add_sub/sub.rs
