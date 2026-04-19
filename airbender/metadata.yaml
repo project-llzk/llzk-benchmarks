@@ -1,0 +1,127 @@
+description:
+  LLZK translations of the airbender ZKVM from zkSync.
+  Each file corresponds to a single opcode circuit (V1), unrolled opcode
+  circuit (Unrolled), or delegation (Delegation).
+  Each LLZK file contains the circuit translation.
+
+repository:
+  name: "project-llzk/airbender-llzk-frontend"
+  url: https://github.com/project-llzk/airbender-llzk-frontend
+  commit: 0cd11020144c5c8ebf1527884ade569a340b92de
+  branch: "llzk"
+
+reproduction: |
+  To reproduce the circuits, clone the frontend repository. Then, enter the nix shell:
+  > nix develop
+  Navigate to the `llzk_backend` directory:
+  > cd llzk_backend
+  Then run the llzk_backend extraction script:
+  > cargo run -- gen-all-circuits --output output -f llzk
+  All of the below circuits will then be available in `output/`
+
+circuits:
+  V1:
+    add_op:
+      llzk: add_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/add_sub.rs"
+    sub_op:
+      llzk: sub_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/add_sub.rs"
+    lui_op:
+      llzk: lui_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/lui_auipc.rs"
+    auipc_op:
+      llzk: auic_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/lui_auipc.rs"
+    xor_op:
+      llzk: xor_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/binops.rs"
+    or_op:
+      llzk: or_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/binops.rs"
+    and_op:
+      llzk: and_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/binops.rs"
+    sll_op:
+      llzk: sll_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/shift.rs"
+    srl_op:
+      llzk: srl_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/shift.rs"
+    sra_op:
+      llzk: sra_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/shift.rs"
+    addmod_op:
+      llzk: addmod_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mop.rs"
+    submod_op:
+      llzk: submod_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mop.rs"
+    mulmod_op:
+      llzk: mulmod_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mop.rs"
+    conditional_op:
+      llzk: conditional_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/conditional.rs"
+    jump_op_trusted:
+      llzk: jump_op_trusted.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/jump.rs"
+    jump_op_untrusted:
+      llzk: jump_op_untrusted.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/jump.rs"
+    mul_op_signed:
+      llzk: mul_op_signed.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mul_div.rs"
+    mul_op_unsigned_only:
+      llzk: mul_op_unsigned_only.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mul_div.rs"
+    divrem_op_signed:
+      llzk: divrem_op_signed.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mul_div.rs"
+    divrem_op_unsigned_only:
+      llzk: divrem_op_unsigned_only.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/mul_div.rs"
+    csrrw_op:
+      llzk: csrrw_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/csr.rs"
+    load_op:
+      llzk: load_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/load.rs"
+    store_op:
+      llzk: store_op.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/machine/ops/store.rs"
+    optimized_decoder:
+      llzk: optimized_decoder.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/picus_translation.rs"
+  Unrolled:
+    add_sub_lui_auipc_mop:
+      llzk: add_sub_lui_auipc_mop.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/add_sub_lui_auipc_mop"
+    jump_branch_slt:
+      llzk: jump_branch_slt.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/jump_branch_slt"
+    load_store_subword_only:
+      llzk: load_store_subword_only.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/load_store_subword_only"
+    load_store_word_only:
+      llzk: load_store_word_only.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/load_store_word_only"
+    mul_div:
+      llzk: mul_div.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/mul_div"
+    shift_binary_csr:
+      llzk: shift_binary_csr.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/shift_binary_csr"
+    unified_reduced_machine:
+      llzk: unified_reduced_machine.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/tree/llzk/circuit_defs/unrolled_circuits/unified_reduced_machine"
+  Delegations:
+    bigint_with_control_delegation:
+      llzk: bigint_with_control_delegation.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/delegation/bigint_with_control/mod.rs"
+    blake2_with_extended_control_delegation:
+      llzk: blake2_with_extended_control_delegation.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/delegation/blake2_round_with_extended_control/mod.rs"
+    keccak_special_5_delegation:
+      llzk: keccak_special_5_delegation.llzk
+      url: "https://github.com/project-llzk/airbender-llzk-frontend/blob/llzk/cs/src/delegation/keccak_special5/mod.rs"
